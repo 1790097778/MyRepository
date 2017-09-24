@@ -30,7 +30,7 @@ function cheak(){
 		else{
 			if(e.equals("name")){%><script type="text/javascript">alert("没有此用户，请检查账号！");</script><%;}
 	  		if(e.equals("password")){%><script type="text/javascript">alert("密码错误！");</script><%;}
-	  		%><script type="text/javascript">El</script><%
+	  		%><script type="text/javascript">El</script><% 
 		}
 	%>
 	

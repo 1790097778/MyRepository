@@ -48,7 +48,7 @@
 														out.print("<td>"+rs.getString("sb_title")+"</td>");
 														out.print("<td>"+rs.getString("sb_type")+"</td>");
 														out.print("<td class=\"center\">"+rs.getString("sb_collegeid")+"</td>");
-														out.print("<td class=\"center\">"+rs.getString("")+"</td>");
+														out.print("<td class=\"center\">"+rs.getString("sb_status")+"</td>");
 														out.print("</tr>");
 													}
 												%>
