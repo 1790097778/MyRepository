@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
-    import="data.DataManager,save.PageControl,data.User"%>
+    import="save.PageControl"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -20,16 +20,12 @@
 
 <body>
 	<%
-	String userType=request.getParameter("userType"),
-	   	   pageName=request.getParameter("pageName"),
-	   	   data[]={"abc","bcd","cde"};
-	userType="student";
-	pageName="lesson_choose,jsp";
-	
-	/* request.setAttribute("user", u);
-	request.setCharacterEncoding("UTF-8"); */
+	String pageName=request.getParameter("page_name");
+	pageName = "Welcome";
 	%>
     <div id="wrapper">
+    
+    	<!--TOP  -->
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
@@ -250,7 +246,8 @@
                 <!-- /.dropdown -->
             </ul>
         </nav>
-        <!--/. NAV TOP  -->
+        
+        <!--LEFT  -->
         <nav class="navbar-default navbar-side" role="navigation">
             	<div class="sidebar-collapse">
                 	<ul class="nav" id="main-menu">
@@ -263,27 +260,39 @@
 							if(isPageVisible[3]){%><%@include file="left/teacher_lesson.jsp" %><%;}
 							if(isPageVisible[4]){%><%@include file="left/teacher_student.jsp" %><%;}
 							if(isPageVisible[5]){%><%@include file="left/teacher_chat.jsp" %><%;}
-							
-							/* if(isPageVisible[0])out.print("<li>      <a class=\"active-menu\" href=\"index.html\"><i class=\"fa fa-table\"></i> 我的选课</a> </li>");
-							if(isPageVisible[1])out.print("<li>    <a href=\"ui-elements.html\"><i class=\"fa fa-edit\"></i> 论文</a></li>");
-							if(isPageVisible[2])out.print("<li>    <a href=\"ui-elements.html\"><i class=\"fa fa-edit\"></i> 成绩及材料</a> </li>");
-							if(isPageVisible[3])out.print("<li>    <a href=\"ui-elements.html\"><i class=\"fa fa-edit\"></i> 我的课题</a></li>");
-							if(isPageVisible[4])out.print("<li>    <a href=\"ui-elements.html\"><i class=\"fa fa-edit\"></i> 我的学生</a></li>");
-							if(isPageVisible[5])out.print("<li>    <a href=\"ui-elements.html\"><i class=\"fa fa-edit\"></i> 聊天</a></li>"); */
 						%>
                 	</ul>
             	</div>
         </nav>
-        <!-- /. NAV SIDE  -->
-        <form action="main.jsp" method="GET" name="contentForm">
-            <div id="page-wrapper">
-            	<div id="page-inner">
-            		<%@include file="Welcome.jsp"%>
-          	    </div>
-            <!-- /. PAGE INNER  -->
-        	</div>
-        </form>
+        
+        <!--CONTENT  -->
+        <div id="page-wrapper">
+        	<div id="page-inner">
+        		<%
+	        		//欢迎页面
+	        		if(pageName == null){%><%@include file="content/Welcome.jsp"%><%;}
+	        		else{
+	        			//学生-我的课题>选择课题
+		          		if(pageName=="student_lesson_choose"){%><%@include file="content/student_lesson_choose.jsp"%><%;}
+		          		
+		          		
+		          		//备用
+		          		if(pageName=="student_"){%><%@include file="content/Welcome.jsp"%><%;}
+		          		if(pageName=="teacher_"){%><%@include file="content/Welcome.jsp"%><%;}
+		          		if(pageName=="leader_"){%><%@include file="content/Welcome.jsp"%><%;}
+		          		if(pageName=="dean_"){%><%@include file="content/Welcome.jsp"%><%;}
+		          		if(pageName=="judger_"){%><%@include file="content/Welcome.jsp"%><%;}
+		          		if(pageName=="reply_"){%><%@include file="content/Welcome.jsp"%><%;}
+		          		if(pageName=="secretary_"){%><%@include file="content/Welcome.jsp"%><%;}
+		          		if(pageName=="secretary_"){%><%@include file="content/Welcome.jsp"%><%;}
+	        		}
+				%>
+      	   </div>
+        <!-- /. PAGE INNER  -->
+    	</div>
         <!-- /. PAGE WRAPPER  -->
+    
+    
     </div>
     <!-- /. WRAPPER  -->
     <!-- JS Scripts-->
@@ -300,10 +309,9 @@
     <script src="assets/js/custom-scripts.js"></script>
 
 	<script type="text/javascript">
-	<%Manager m; %>
-	function loadView(name){
+	function loadView(name,data){
 	    $("#page-inner").empty();
-	    $("#page-inner").load(name,{<%="name"+":"+"'朱朱'"%>,age:12},null);
+	    $("#page-inner").load(name,data,null);
 	}
 	</script>
 

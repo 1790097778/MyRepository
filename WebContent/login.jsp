@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>湖北工业大学-毕业设计系统</title>
@@ -23,6 +24,16 @@ function cheak(){
 
 
 <body class="body_UQVCAY" data-c_tl_id="M_c54ddfcffb39c610">
+	<%
+		String e = request.getParameter("e");
+		if(e==null){%><script type="text/javascript">alert("sdasda");</script><%;}
+		else{
+			if(e.equals("name")){%><script type="text/javascript">alert("没有此用户，请检查账号！");</script><%;}
+	  		if(e.equals("password")){%><script type="text/javascript">alert("密码错误！");</script><%;}
+	  		%><script type="text/javascript">El</script><%
+		}
+	%>
+	
 	<div class="container-fluid c-section section_Wl9Fwc c-scrollIn"
 		data-c_tl_id="M_79e0641cd4978a2071666829f62732d1">
 		<div class="container c-container container_1oVg7Q">
