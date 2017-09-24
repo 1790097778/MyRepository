@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2017-9-25 0:32:35 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="user" dynamic-insert="false" dynamic-update="false" mutable="true" name="entity.DsStudentinfo" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="ds_studentinfo">
+        <id name="stId" type="java.lang.Integer">
+            <column name="st_id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="stCollegeid" optimistic-lock="true" type="int" unique="false">
+            <column name="st_collegeid" not-null="true">
+                <comment>学院ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="stMajorid" optimistic-lock="true" type="int" unique="false">
+            <column name="st_majorid" not-null="true">
+                <comment>专业ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="stClassid" optimistic-lock="true" type="int" unique="false">
+            <column name="st_classid" not-null="true">
+                <comment>ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="stTeacherid" optimistic-lock="true" type="int" unique="false">
+            <column name="st_teacherid" not-null="true">
+                <comment>指老师ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="stPaperid" optimistic-lock="true" type="int" unique="false">
+            <column name="st_paperid" not-null="true">
+                <comment>论文ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="stSubjectid" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="st_subjectid">
+                <comment>题目ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="stReplyid" optimistic-lock="true" type="int" unique="false">
+            <column name="st_replyid" not-null="true">
+                <comment>答辩ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="stPowerid" optimistic-lock="true" type="int" unique="false">
+            <column name="st_powerid" not-null="true">
+                <comment>权限ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="stStuname" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="st_stuname" not-null="true">
+                <comment>姓名</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="stUsername" optimistic-lock="true" type="string" unique="false">
+            <column length="11" name="st_username" not-null="true">
+                <comment>工号</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="stPassword" optimistic-lock="true" type="string" unique="false">
+            <column length="11" name="st_password" not-null="true">
+                <comment>密码</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="stTelnumber" optimistic-lock="true" type="string" unique="false">
+            <column length="11" name="st_telnumber">
+                <comment>手机号码</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="stEmail" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="st_email">
+                <comment></comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="stScore" optimistic-lock="true" type="java.lang.Float" unique="false">
+            <column name="st_score" precision="3" scale="1">
+                <comment>总成�</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

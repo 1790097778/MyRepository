@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2017-9-25 0:32:35 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="user" dynamic-insert="false" dynamic-update="false" mutable="true" name="entity.DsSupermanager" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="ds_supermanager">
+        <id name="smgId" type="java.lang.Integer">
+            <column name="smg_id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="smgPowerid" optimistic-lock="true" type="int" unique="false">
+            <column name="smg_powerid" not-null="true">
+                <comment>权限ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="smgStuname" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="smg_stuname" not-null="true">
+                <comment>姓名</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="smgUsername" optimistic-lock="true" type="string" unique="false">
+            <column length="11" name="smg_username" not-null="true">
+                <comment>工号</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="smgPassword" optimistic-lock="true" type="string" unique="false">
+            <column length="11" name="smg_password" not-null="true">
+                <comment>密码</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

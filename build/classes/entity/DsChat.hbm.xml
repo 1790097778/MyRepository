@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2017-9-25 0:32:35 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="user" dynamic-insert="false" dynamic-update="false" mutable="true" name="entity.DsChat" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="ds_chat">
+        <id name="chId" type="int">
+            <column name="ch_id"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="chPublisherid" optimistic-lock="true" type="int" unique="false">
+            <column name="ch_publisherid" not-null="true">
+                <comment>发布者ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="chReceiver" optimistic-lock="true" type="int" unique="false">
+            <column name="ch_receiver" not-null="true">
+                <comment>接收者ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="chCollegeid" optimistic-lock="true" type="int" unique="false">
+            <column name="ch_collegeid" not-null="true">
+                <comment>学院ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="chMajorid" optimistic-lock="true" type="int" unique="false">
+            <column name="ch_majorid" not-null="true">
+                <comment>专业ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="chClassid" optimistic-lock="true" type="int" unique="false">
+            <column name="ch_classid" not-null="true">
+                <comment>ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="chTime" optimistic-lock="true" type="string" unique="false">
+            <column length="8" name="ch_time" not-null="true">
+                <comment>时间</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="chContent" optimistic-lock="true" type="string" unique="false">
+            <column name="ch_content" not-null="true">
+                <comment>内</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

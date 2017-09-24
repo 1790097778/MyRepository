@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2017-9-25 0:32:35 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="user" dynamic-insert="false" dynamic-update="false" mutable="true" name="entity.DsReplyalloat" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="ds_replyalloat">
+        <id name="raId" type="java.lang.Integer">
+            <column name="ra_id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="raCollegeid" optimistic-lock="true" type="int" unique="false">
+            <column name="ra_collegeid" not-null="true">
+                <comment>学院ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="raMajorid" optimistic-lock="true" type="int" unique="false">
+            <column name="ra_majorid" not-null="true">
+                <comment>专业ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="raTeacherid" optimistic-lock="true" type="int" unique="false">
+            <column name="ra_teacherid" not-null="true">
+                <comment>答辩主席ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="raStudentid" optimistic-lock="true" type="int" unique="false">
+            <column name="ra_studentid" not-null="true">
+                <comment>生ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="raTime" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="ra_time" not-null="true">
+                <comment>时间</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="raPlace" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="ra_place" not-null="true">
+                <comment>地点</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

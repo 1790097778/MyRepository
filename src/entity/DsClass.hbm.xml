@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2017-9-25 0:32:35 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="user" dynamic-insert="false" dynamic-update="false" mutable="true" name="entity.DsClass" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="ds_class">
+        <id name="csId" type="java.lang.Integer">
+            <column name="cs_id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="csCollegeid" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="cs_collegeid">
+                <comment>学院ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="csMajorid" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="cs_majorid">
+                <comment>专业ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="csName" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="cs_name">
+                <comment>名称</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

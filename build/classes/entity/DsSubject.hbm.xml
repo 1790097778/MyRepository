@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2017-9-25 0:32:35 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="user" dynamic-insert="false" dynamic-update="false" mutable="true" name="entity.DsSubject" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="ds_subject">
+        <id name="sbId" type="java.lang.Integer">
+            <column name="sb_id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="sbStudentid" optimistic-lock="true" type="int" unique="false">
+            <column name="sb_studentid" not-null="true">
+                <comment>学生ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="sbTeacherid" optimistic-lock="true" type="int" unique="false">
+            <column name="sb_teacherid" not-null="true">
+                <comment>导师ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="sbCollegeid" optimistic-lock="true" type="int" unique="false">
+            <column name="sb_collegeid" not-null="true">
+                <comment>学院ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="sbMajorid" optimistic-lock="true" type="int" unique="false">
+            <column name="sb_majorid" not-null="true">
+                <comment>专业ID</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="sbTitle" optimistic-lock="true" type="string" unique="false">
+            <column length="60" name="sb_title" not-null="true">
+                <comment>名称</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="sbComments" optimistic-lock="true" type="string" unique="false">
+            <column length="65535" name="sb_comments">
+                <comment>要求</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="sbContent" optimistic-lock="true" type="string" unique="false">
+            <column name="sb_content" not-null="true">
+                <comment>内</comment>
+            </column>
+        </property>
+        <property generated="never" lazy="false" name="sbStatus" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="sb_status" not-null="true">
+                <comment>(0表示过，1表示通过)</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
