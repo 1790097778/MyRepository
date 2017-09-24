@@ -42,7 +42,7 @@ function cheak(){
 					class="col-lg-6 col-md-6 col-sm-6 col-xs-12 c-column column_EXJ39w">
 					<p class="paragraph_ziD2v8">登陆：</p>
 					<form
-						action="main.jsp" class="c-form form_mgltEd" data-redirect="/success" method="post"
+						action="loginServelet" class="c-form form_mgltEd" data-redirect="/success" method="post"
 						name="form" onsubmit="cheak()">
 						<label class="c-label label_hq1X7i">账号: </label><input
 							autofocus="True" class="c-input input_ju04Ga" name="name"
