@@ -269,6 +269,7 @@
         <div id="page-wrapper">
         	<div id="page-inner">
         		<%
+        			//Kizen :Get user's power data from session and decide which buttons to show;
 	        		//欢迎页面
 	        		if(pageName == null){%><%@include file="content/Welcome.jsp"%><%;}
 	        		else{
