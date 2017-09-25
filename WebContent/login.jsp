@@ -22,12 +22,20 @@ function cheak(){
 
 </head>
 
+<%
+/*
+登录界面说明：用户输入用户名（name）和密码（password）后，以POST方式传至loginIn进行处理。
+若登录成功，loginIn 应将用户的界面左侧功能列表，和顶部功能列表存储至session，然后跳转至main.jsp
+若登录失败，loginIn 应将错误类型返回至login.jsp: 用户名错误返回{errorType:"name"}, 密码错误返回{errorType:"password"}
 
+PS：{name1:value1,name2:value2}表示两个参数，其中参数1（name1）的值为value1、参数2（name2）的值为value2。
+以后我页面提交的参数和需要返回什么参数我就已这种形式备注在页面头部，在写相应页面的处理时，要记得先看头部的说明，省的你自己看HTML看半天。。。。
+*/
+%>
 <body class="body_UQVCAY" data-c_tl_id="M_c54ddfcffb39c610">
 	<%
-		String e = request.getParameter("e");
-		if(e==null){%><script type="text/javascript">alert("sdasda");</script><%;}
-		else{
+		String e = request.getParameter("errorType");
+		if(e != null){
 			if(e.equals("name")){%><script type="text/javascript">alert("没有此用户，请检查账号！");</script><%;}
 	  		if(e.equals("password")){%><script type="text/javascript">alert("密码错误！");</script><%;}
 	  		%><script type="text/javascript">El</script><% 
