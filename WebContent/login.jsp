@@ -25,11 +25,15 @@ function cheak(){
 <%
 /*
 登录界面说明：用户输入用户名（name）和密码（password）后，以POST方式传至loginIn进行处理。
-若登录成功，loginIn 应将用户的界面左侧功能列表，和顶部功能列表存储至session，然后跳转至main.jsp
+若登录成功，loginIn 应将用户的界面左侧功能列表，和顶部功能列表存储至session，然后跳转至main.jsp.
 若登录失败，loginIn 应将错误类型返回至login.jsp: 用户名错误返回{errorType:"name"}, 密码错误返回{errorType:"password"}
+
+备注：session页面功能参数说明，参数left为左侧显示的控制参数，他是一个boolean类型的一维数组，参数top为顶部功能列表选择显示的参数，它也是一个boolean类型的参数，具体的数组与功能控制的对应关系，等所有页面写出来和所有功能做出来再行规定
 
 PS：{name1:value1,name2:value2}表示两个参数，其中参数1（name1）的值为value1、参数2（name2）的值为value2。
 以后我页面提交的参数和需要返回什么参数我就已这种形式备注在页面头部，在写相应页面的处理时，要记得先看头部的说明，省的你自己看HTML看半天。。。。
+
+然后push的备注最好以此格式：[year+month+day]/[hour:minute][By+NAME]+特殊备注       例：20170925/21:03ByZhu
 */
 %>
 <body class="body_UQVCAY" data-c_tl_id="M_c54ddfcffb39c610">
