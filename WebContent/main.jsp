@@ -88,23 +88,30 @@
 
 	<script type="text/javascript">
 	function loadView(page_name,mothod_name,send_data){
-	    $("#page-inner").empty();
 	    $.ajax({
+	    	global:false,
 	    	async:true,
 	    	type: "post",
 	    	dataType:"json",
 	    	data:send_data,
 	    	url:mothod_name,
 	    	beforeSend:function(){
-	    		
+	    		$("#page-inner").empty();
+	    		$("#page-inner").load("content/msg_loading.jsp");
 	    	},
 	    	success:function(data){
-	    	    $("#page-inner").load(page_name,data,null);
+	    		$("#page-inner").empty();
+	    		$("#page-inner").load(page_name,data,null);
 	    	},
-	    	error: function(){
-	              //请求出错处理
-	            alert("RequstError!");
-	        }
+	    	error: function(XMLHttpRequest, textStatus, errorThrown) {
+	    		 var errorMsg="error in $.ajax()"+
+	    			 		  "&error=XMLHttpRequest.status:"+XMLHttpRequest.status+
+	    		 			  "&error=XMLHttpRequest.readyState:"+XMLHttpRequest.readyState+
+	    		 			  "&error=textStatus:"+textStatus+
+	    		 			  "&error=errorThrown:"+errorThrown;
+	    		 $("#wrapper").empty();
+	    		 location.href ="content/msg_error.jsp?error="+errorMsg;
+	    	}
 	    });
 	}
 	</script>

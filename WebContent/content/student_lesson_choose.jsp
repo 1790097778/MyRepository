@@ -41,12 +41,13 @@
 												<%
 													while(true){
 														out.print("<tr class=\"gradeX\">");
-														out.print("<td><div class=\"radio\"> <label> <input type=\"radio\" name=\"optionsRadios"+"\" id=\"optionsRadios"+"\" value=\"option\" >"+"</label> </div></td>");
+														out.print("<td><div class=\"radio\"> <label> <input type=\"radio\" name=\"optionsRadios"+"\" id=\"optionsRadios"+"\" value=\"option\" >"+request.getParameter("name")+"</label> </div></td>");
 														out.print("<td>"+"</td>");
 														out.print("<td>"+"</td>");
 														out.print("<td class=\"center\">"+"</td>");
 														out.print("<td class=\"center\">"+"</td>");
 														out.print("</tr>");
+														break;
 													}
 												%>
 												<tr class="gradeX">
