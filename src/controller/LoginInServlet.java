@@ -53,7 +53,7 @@ public class LoginInServlet extends HttpServlet {
 		//The account dosen't exist in database;
 		case 0:
 		{
-			System.out.println("there is no data");
+			System.out.println("there is no data!");
 			request.setAttribute("errorType", "name");
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 			break;
@@ -62,9 +62,11 @@ public class LoginInServlet extends HttpServlet {
 		case 1:
 		{
 			
-			if(list.get(0).getStPassword()!=request.getParameter("password"))
+			if(!list.get(0).getStPassword().equals(request.getParameter("password")))
 			{
+				System.out.println(request.getParameter("name")+","+request.getParameter("password")+":"+list.get(0).getStUsername()+","+list.get(0).getStPassword());
 				//The password is wrong
+				System.out.println("wrong password!");
 				request.setAttribute("errorType", "password");
 				request.getRequestDispatcher("login.jsp").forward(request, response);
 			}
@@ -74,7 +76,12 @@ public class LoginInServlet extends HttpServlet {
 				dc = DetachedCriteria.forClass(DsPower.class);
 				dc.add(Restrictions.eq("pwId", list.get(0).getStPowerid()));
 				Criteria serPower = dc.getExecutableCriteria(dSession);
-				ArrayList<DsPower> power = (ArrayList)serPower.list();
+				ArrayList<DsPower> power=null;
+				try {
+					power = (ArrayList)serPower.list();
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
 				
 				//Save in session 
 				HttpSession hSession =  request.getSession();

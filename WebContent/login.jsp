@@ -42,8 +42,8 @@ PS：{name1:value1,name2:value2}表示两个参数，其中参数1（name1）的
 		if(e != null){
 			if(e.equals("name")){%><script type="text/javascript">alert("没有此用户，请检查账号！");</script><%;}
 	  		if(e.equals("password")){%><script type="text/javascript">alert("密码错误！");</script><%;}
-	  		%><script type="text/javascript">El</script><% 
-		}
+	  		
+		}else{%><script type="text/javascript">alert("数据错误！"+"<%=e%>");</script><% }
 	%>
 	
 	<div class="container-fluid c-section section_Wl9Fwc c-scrollIn"

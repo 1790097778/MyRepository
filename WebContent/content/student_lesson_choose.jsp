@@ -1,5 +1,3 @@
-<%@page import="save.ResultSaver"%>
-<%@page import="java.sql.ResultSet"%>
 <%@page pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -41,14 +39,13 @@
 											</thead>
 											<tbody>
 												<%
-													ResultSaver rs = (ResultSaver)request.getAttribute("data");
-													while(rs.next()){
+													while(true){
 														out.print("<tr class=\"gradeX\">");
-														out.print("<td><div class=\"radio\"> <label> <input type=\"radio\" name=\"optionsRadios"+rs.getString("sb_id")+"\" id=\"optionsRadios"+rs.getString("sb_id")+"\" value=\"option\" >"+rs.getString("sb_id")+"</label> </div></td>");
-														out.print("<td>"+rs.getString("sb_title")+"</td>");
-														out.print("<td>"+rs.getString("sb_type")+"</td>");
-														out.print("<td class=\"center\">"+rs.getString("sb_collegeid")+"</td>");
-														out.print("<td class=\"center\">"+rs.getString("sb_status")+"</td>");
+														out.print("<td><div class=\"radio\"> <label> <input type=\"radio\" name=\"optionsRadios"+"\" id=\"optionsRadios"+"\" value=\"option\" >"+"</label> </div></td>");
+														out.print("<td>"+"</td>");
+														out.print("<td>"+"</td>");
+														out.print("<td class=\"center\">"+"</td>");
+														out.print("<td class=\"center\">"+"</td>");
 														out.print("</tr>");
 													}
 												%>
