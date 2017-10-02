@@ -50,12 +50,21 @@
             	<div class="sidebar-collapse">
                 	<ul class="nav" id="main-menu">
                     	<%
+                    		//学生左槽
                    	 		if(true){%><%@include file="left/student_lesson.jsp"%><%;}
                     		if(true){%><%@include file="left/student_paper.jsp" %><%;}
 							if(true){%><%@include file="left/student_grades.jsp" %><%;}
+							//老师左槽
 							if(true){%><%@include file="left/teacher_lesson.jsp" %><%;}
 							if(true){%><%@include file="left/teacher_student.jsp" %><%;}
 							if(true){%><%@include file="left/teacher_chat.jsp" %><%;}
+							if(true){%><%@include file="left/teacher_defense.jsp" %><%;}
+							if(true){%><%@include file="left/teacher_upload.jsp" %><%;}
+							if(true){%><%@include file="left/teacher_paper.jsp" %><%;}
+							//负责人左槽
+                   	 		if(true){%><%@include file="left/leader_lesson.jsp"%><%;}
+                   	 		if(true){%><%@include file="left/leader_defense.jsp"%><%;}
+                   	 		if(true){%><%@include file="left/leader_notice.jsp"%><%;}
 						%>
                 	</ul>
             	</div>
