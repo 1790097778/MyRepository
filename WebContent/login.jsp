@@ -39,11 +39,12 @@ PS：{name1:value1,name2:value2}表示两个参数，其中参数1（name1）的
 <body class="body_UQVCAY" data-c_tl_id="M_c54ddfcffb39c610">
 	<%
 		String e = request.getParameter("errorType");
+		System.out.print("test:"+e);
 		if(e != null){
 			if(e.equals("name")){%><script type="text/javascript">alert("没有此用户，请检查账号！");</script><%;}
-	  		if(e.equals("password")){%><script type="text/javascript">alert("密码错误！");</script><%;}
-	  		
-		}else{%><script type="text/javascript">alert("数据错误！"+"<%=e%>");</script><% }
+			if(e.equals("password")){%><script type="text/javascript">alert("密码错误！");</script><%;}
+			if(e.equals("unlogin")){%><script type="text/javascript">alert("请先登录！");</script><%;}
+		}
 	%>
 	
 	<div class="container-fluid c-section section_Wl9Fwc c-scrollIn"

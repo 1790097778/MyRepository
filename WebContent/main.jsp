@@ -19,8 +19,14 @@
 
 <body>
 	<%
-	String pageName=request.getParameter("page_name");
-	pageName = "Welcome";
+		String userSession[]=session.getValueNames();
+		try{
+			if(userSession[0]==null){
+				%><script type="text/javascript">location.href ="login.jsp?errorType=\"请先登录！\"";</script><%
+			}
+		}catch(Exception e){
+			%><script type="text/javascript">location.href ="login.jsp?errorType=unlogin";</script><%
+		}
 	%>
     <div id="wrapper">
     

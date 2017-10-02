@@ -1,4 +1,4 @@
 <%@page pageEncoding="UTF-8"%>
 <li>
-    <a href="ui-elements.html"><i class="fa fa-edit"></i> 答辩安排</a> 
+    <a href="ui-elements.html" onclick="loadView('#','aaa',{id:3})"><i class="fa fa-sitemap"></i> 答辩安排</a> 
 </li>
