@@ -38,7 +38,7 @@ PS：{name1:value1,name2:value2}表示两个参数，其中参数1（name1）的
 %>
 <body class="body_UQVCAY" data-c_tl_id="M_c54ddfcffb39c610">
 	<%
-		String e = request.getParameter("errorType");
+		String e = request.getParameter("error");
 		System.out.print("test:"+e);
 		if(e != null){
 			if(e.equals("name")){%><script type="text/javascript">alert("没有此用户，请检查账号！");</script><%;}

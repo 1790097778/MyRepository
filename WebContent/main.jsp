@@ -22,10 +22,10 @@
 		String userSession[]=session.getValueNames();
 		try{
 			if(userSession[0]==null){
-				%><script type="text/javascript">location.href ="login.jsp?errorType=\"请先登录！\"";</script><%
+				%><script type="text/javascript">location.href ="login.jsp?error=\"请先登录！\"";</script><%
 			}
 		}catch(Exception e){
-			%><script type="text/javascript">location.href ="login.jsp?errorType=unlogin";</script><%
+			%><script type="text/javascript">location.href ="login.jsp?error=unlogin";</script><%
 		}
 	%>
     <div id="wrapper">
