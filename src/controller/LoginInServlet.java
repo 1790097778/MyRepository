@@ -54,7 +54,7 @@ public class LoginInServlet extends HttpServlet {
 		case 0:
 		{
 			System.out.println("there is no data!");
-			request.setAttribute("errorType", "name");
+			request.setAttribute("error", "name");
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 			break;
 		}
@@ -67,7 +67,7 @@ public class LoginInServlet extends HttpServlet {
 				System.out.println(request.getParameter("name")+","+request.getParameter("password")+":"+list.get(0).getStUsername()+","+list.get(0).getStPassword());
 				//The password is wrong
 				System.out.println("wrong password!");
-				request.setAttribute("errorType", "password");
+				request.setAttribute("error", "password");
 				request.getRequestDispatcher("login.jsp").forward(request, response);
 			}
 			else
