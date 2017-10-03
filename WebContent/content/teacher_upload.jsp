@@ -17,7 +17,7 @@
 <div class="row">
 	<div class="col-md-12">
 		<div class="header">
-			课题管理
+			答辩材料上传
 		</div>
 		<!--这里插入-->
 		

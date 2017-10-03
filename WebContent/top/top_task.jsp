@@ -22,7 +22,7 @@
         </li>
         <li class="divider"></li>
         <li>
-            <a class="text-center" href="#">
+            <a class="text-center" onclick="loadView('content/student_task.jsp','aaa',{id:3})">
                 <strong>See All Tasks</strong>
                 <i class="fa fa-angle-right"></i>
             </a>

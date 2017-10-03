@@ -10,9 +10,9 @@
 		<li>
 			<a href="#">
 				<div>
-					<strong>John Doe</strong>
+					<strong>张老师</strong>
 					<span class="pull-right text-muted">
-						<em>Today</em>
+						<em>2017.10.03</em>
 					</span>
 				</div>
 				<div>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</div>
@@ -20,8 +20,11 @@
 		</li>
 		<li class="divider"></li>
 
-		<li><a class="text-center" href="#"> <strong>所有消息</strong> <i
-				class="fa fa-angle-right"></i>
-		</a></li>
+		<li>
+			<a class="text-center" onclick="loadView('content/student_chat.jsp','aaa',{id:3})">
+				<strong>所有消息</strong>
+				<i class="fa fa-angle-right"></i>
+			</a>
+		</li>
 	</ul> <!-- /.drop down-messages -->
 </li>
