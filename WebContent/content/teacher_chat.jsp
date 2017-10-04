@@ -14,13 +14,21 @@
 </style>
 </head>
 <body>
+
 <div class="row">
 	<div class="col-md-12">
-		<div class="header">
-			聊天
+		<!-- Advanced Tables -->
+		<div class="panel panel-default">
+			<div class="panel-heading"><div class="header">
+				聊天
+			</div>
+			<div class="panel-body">
+				<div class="table-responsive">
+					<!-- 在此处填充内容 -->
+				</div>
+			</div>
 		</div>
-		<!--这里插入-->
-		
+		<!--End Advanced Tables -->
 	</div>
 </div>
 </body>

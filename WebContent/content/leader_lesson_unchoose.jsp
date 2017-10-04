@@ -20,7 +20,20 @@
 			<a href="#">课程管理</a>>未选题学生
 		</div>
 		<!--这里插入-->
-		
+		<div class="row">
+			<div class="col-md-12">
+				<!-- Advanced Tables -->
+				<div class="panel panel-default">
+					<div class="panel-heading">选课：</div>
+					<div class="panel-body">
+						<div class="table-responsive">
+							
+						</div>
+					</div>
+				</div>
+				<!--End Advanced Tables -->
+			</div>
+		</div>
 	</div>
 </div>
 </body>

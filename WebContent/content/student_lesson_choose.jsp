@@ -73,7 +73,6 @@
 							</table>
 							<button onclick="#">添加课程</button>
 						</div>
-
 					</div>
 				</div>
 				<!--End Advanced Tables -->

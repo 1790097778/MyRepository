@@ -102,6 +102,9 @@
     <script src="assets/js/custom-scripts.js"></script>
 
 	<script type="text/javascript">
+	function back(){
+		
+	}
 	function loadView(page_name,mothod_name,send_data){
 	    $.ajax({
 	    	global:false,
