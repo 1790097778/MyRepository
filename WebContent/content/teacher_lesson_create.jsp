@@ -18,12 +18,15 @@
 	<div class="col-md-12">
 		<!-- Advanced Tables -->
 		<div class="panel panel-default">
-			<div class="panel-heading"><div class="header">
-				<a href="#">课程管理</a>>创建课题</div>
+			<div class="panel-heading">
+				<div class="header">
+					<a href="#">课程管理</a>>创建课题
+				</div>
 			</div>
 			<div class="panel-body">
 				<div class="table-responsive">
-					<!-- 在此处填充内容 -->
+					<!-- 此处填充内容 -->
+					
 				</div>
 			</div>
 		</div>

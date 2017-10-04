@@ -18,13 +18,16 @@
 	<div class="col-md-12">
 		<!-- Advanced Tables -->
 		<div class="panel panel-default">
-			<div class="panel-heading"><div class="header">
-				<a href="#">我的学生</a>
-				<a href="#">>任务</a>>任务管理
+			<div class="panel-heading">
+				<div class="header">
+					<a href="#">我的学生</a>
+					<a href="#">>任务</a>>任务管理
+				</div>
 			</div>
 			<div class="panel-body">
 				<div class="table-responsive">
-					<!-- 在此处填充内容 -->
+					<!-- 此处填充内容 -->
+					
 				</div>
 			</div>
 		</div>

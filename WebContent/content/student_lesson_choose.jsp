@@ -18,18 +18,17 @@
 <body>
 <div class="row">
 	<div class="col-md-12">
-		<div class="header">
-			选择课题
-		</div>
-		<!--这里插入-->
-		<div class="row">
-			<div class="col-md-12">
-				<!-- Advanced Tables -->
-				<div class="panel panel-default">
-					<div class="panel-heading">选课：</div>
-					<div class="panel-body">
-						<div class="table-responsive">
-							<table class="table table-striped table-bordered table-hover"
+		<!-- Advanced Tables -->
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="header">
+					选择课题
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="table-responsive">
+					<!-- 此处填充内容 -->
+					<table class="table table-striped table-bordered table-hover"
 								id="dataTables-example">
 								<thead>
 									<tr>
@@ -71,13 +70,10 @@
 									</tr>
 								</tbody>
 							</table>
-							<button onclick="#">添加课程</button>
-						</div>
-					</div>
 				</div>
-				<!--End Advanced Tables -->
 			</div>
 		</div>
+		<!--End Advanced Tables -->
 	</div>
 </div>
 </body>

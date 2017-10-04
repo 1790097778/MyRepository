@@ -16,24 +16,21 @@
 <body>
 <div class="row">
 	<div class="col-md-12">
-		<div class="header">
-			发布公告
-		</div>
-		<!--这里插入-->
-		<div class="row">
-			<div class="col-md-12">
-				<!-- Advanced Tables -->
-				<div class="panel panel-default">
-					<div class="panel-heading">选课：</div>
-					<div class="panel-body">
-						<div class="table-responsive">
-							
-						</div>
-					</div>
+		<!-- Advanced Tables -->
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="header">
+					发布公告
 				</div>
-				<!--End Advanced Tables -->
+			</div>
+			<div class="panel-body">
+				<div class="table-responsive">
+					<!-- 此处填充内容 -->
+					
+				</div>
 			</div>
 		</div>
+		<!--End Advanced Tables -->
 	</div>
 </div>
 </body>

@@ -14,17 +14,19 @@
 </style>
 </head>
 <body>
-
 <div class="row">
 	<div class="col-md-12">
 		<!-- Advanced Tables -->
 		<div class="panel panel-default">
-			<div class="panel-heading"><div class="header">
-				聊天
+			<div class="panel-heading">
+				<div class="header">
+					聊天
+				</div>
 			</div>
 			<div class="panel-body">
 				<div class="table-responsive">
-					<!-- 在此处填充内容 -->
+					<!-- 此处填充内容 -->
+					
 				</div>
 			</div>
 		</div>
