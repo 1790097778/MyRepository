@@ -27,7 +27,7 @@
 		                <div style="padding-bottom: 10px;">学生：</div>
 		                <div style="padding-bottom: 10px;">时间：<input type="text"/></div>                                             <!--时间地点-->
 		                <div style="padding-bottom: 10px;">地点：<input type="text"/></div>
-		                <button onclick="">提交</button>
+		                <button onclick="loadView('content/leader_defense.jsp','aaa',{id:3})">提交</button>
 		            </div>
 				</div>
 			</div>

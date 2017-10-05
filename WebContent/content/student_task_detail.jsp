@@ -20,7 +20,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<div class="header">
-					<a href="#">任务</a>>任务详情
+					<a onclick="loadView('content/student_task.jsp','aaa',{id:3})">任务</a>>任务详情
 				</div>
 			</div>
 			<div class="panel-body">
@@ -70,7 +70,7 @@
                               </div>
                        </div>
 	                </div>
-	                <button onclick="#" style="font-size: 17px;">提交</button>
+	                <button onclick="loadView('content/student_task.jsp','aaa',{id:3})" style="font-size: 17px;">提交</button>
 				</div>
 			</div>
 		</div>

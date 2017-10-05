@@ -39,19 +39,14 @@
 							</tr>
 						</thead>
 						<tbody>
-							<%
-								while(true){
-									out.print("<tr class=\"gradeX\">");
-									out.print("<td>0002405</td>");
-									//out.print("<td>"+request.getParameter("name")+"</td>");
-									out.print("<td>"+"叶绿体的能量转换率"+"</td>");
-									out.print("<td>"+"科研项目"+"</td>");
-									out.print("<td class=\"center\">"+"理学院"+"</td>");
-									out.print("<td class=\"redstyle\">"+"<a onclick=\"#\">查看详情</a>"+"</td>");
-									out.print("<td class=\"center\"><button onclick=\"#\">放弃选题</button></td></tr>");
-									break;
-								}
-							%>
+							<tr class="gradeX">
+								<td>0002405</td>
+								<td>叶绿体的能量转换率</td>
+								<td>科研项目</td>
+								<td class="center">理学院</td>
+								<td class="redstyle"><a onclick="loadView('content/student_lesson_detail.jsp','aaa',{id:3})">查看详情</a></td>
+								<td class="center"><button onclick="loadView('content/student_lesson_choose.jsp','aaa',{id:3})">放弃选题</button></td>
+							</tr>
 						</tbody>
 					</table>
 				</div>

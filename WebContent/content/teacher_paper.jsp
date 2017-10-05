@@ -42,7 +42,7 @@
                               </div>
                        </div>
 	                </div>
-	                <div style="text-align: center;"><button onclick="loadView('content/teacher_lesson.jsp','aaa',{id:3})" style="margin: auto;width: 120px;">提交保存</button></div>
+	                <div style="text-align: center;"><button onclick="#" style="margin: auto;width: 120px;">提交保存</button></div>
 				</div>
 			</div>
 		</div>

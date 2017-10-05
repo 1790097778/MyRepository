@@ -61,6 +61,12 @@
                         	此处应有要求
                         </div>
                     </div>
+					<div style="text-align: left;">
+						<button onclick="loadView('content/student_lesson_choose.jsp','aaa',{id:3})" style="margin: auto;">返回</button>
+					</div>
+					<div style="text-align: center;margin-top: -25px;">
+						<button onclick="loadView('content/student_lesson.jsp','aaa',{id:3})" style="margin: auto;">选择课题</button>
+					</div>
 				</div>
 			</div>
 		</div>

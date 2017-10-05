@@ -44,7 +44,7 @@
                                  <td>Kimsila</td>
                                  <td>Marriye</td>
                                  <td>Kim1425</td>
-                                 <td><a href="#">设置时间地点</a></td>
+                                 <td><a onclick="loadView('content/leader_defense_detail.jsp','aaa',{id:3})">设置时间地点</a></td>
                              </tr>
 
                              </tbody>

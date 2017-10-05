@@ -35,6 +35,7 @@
 								<th>课程名称</th>
 								<th>课程类型(s)</th>
 								<th>院系</th>
+								<th>查看详情</th>
 								<th>状态</th>
 							</tr>
 						</thead>
@@ -46,6 +47,7 @@
 									out.print("<td>"+"无"+"</td>");
 									out.print("<td>"+"无"+"</td>");
 									out.print("<td class=\"center\">"+"无"+"</td>");
+									out.print("<td class=\"bluestyle\">"+"<a onclick=\"loadView('content/student_lesson_detail.jsp','aaa',{id:3})\">查看详情</a>"+"</td>");
 									out.print("<td class=");
 									if(true)out.print("\"redstyle\">"+"可选"+"</td>");
 									else out.print("\"center\">"+"不可选"+"</td>");
@@ -58,6 +60,7 @@
 								<td>太阳能电池效率研究</td>
 								<td>科研项目</td>
 								<td class="center">理学院</td>
+								<td class="bluestyle"><a onclick="loadView('content/student_lesson_detail.jsp','aaa',{id:3})">查看详情</a></td>
 								<td class="redstyle">可选</td>
 							</tr>
 							<tr class="gradeX">
@@ -65,10 +68,19 @@
 								<td>共享汽车的商业模式</td>
 								<td>社会调查</td>
 								<td class="center">计算机学院</td>
+								<td class="bluestyle"><a onclick="loadView('content/student_lesson_detail.jsp','aaa',{id:3})">查看详情</a></td>
 								<td class="center">不可选</td>
 							</tr>
 						</tbody>
 					</table>
+					<div style="text-align: left;"><button style="margin: auto;width: 120px;" onclick="loadView('content/student_lesson.jsp','aaa',{id:3})">添加选课</button></div>
+					<div style="text-align: center;margin-top: -25px;">
+						<div style="margin: auto;">
+							<button style="padding-right: 10px;">上一页</button>
+							1/1
+							<button style="padding-left: 10px;">下一页</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

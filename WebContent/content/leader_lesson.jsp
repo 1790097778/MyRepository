@@ -47,7 +47,7 @@
 									out.print("<td>"+"叶绿体的能量转换率"+"</td>");
 									out.print("<td>"+"科研项目"+"</td>");
 									out.print("<td class=\"center\">"+"理学院"+"</td>");
-									out.print("<td class=\"redstyle\">"+"查看详情"+"</td>");
+									out.print("<td class=\"bluestyle\">"+"<a onclick=\"loadView('content/teacher_lesson_create.jsp','aaa',{id:3})\">查看详情</a>"+"</td>");
 									out.print("<td class=\"center\">"
 												+"<div class=\"radio\"> <label> <input type=\"radio\" name=\"optionsRadios1\" value=\"y\" >通过</label></div>"
 												+"<div class=\"radio\"> <label> <input type=\"radio\" name=\"optionsRadios1\" value=\"n\" >不通过</label> </div>"+
@@ -61,7 +61,7 @@
 								<td>太阳能电池效率研究</td>
 								<td>科研项目</td>
 								<td class="center">理学院</td>
-								<td class="redstyle">查看详情</td>
+								<td class="bluestyle"><a onclick="loadView('content/teacher_lesson_create.jsp','aaa',{id:3})">查看详情</a></td>
 								<td class="center">
 									<div class="radio"> <label> <input type="radio" name="optionsRadios2" value="y" >通过</label> </div>
 									<div class="radio"> <label> <input type="radio" name="optionsRadios2" value="n" >不通过</label> </div>
@@ -73,7 +73,7 @@
 								<td>共享汽车的商业模式</td>
 								<td>社会调查</td>
 								<td class="center">计算机学院</td>
-								<td class="redstyle">查看详情</td>
+								<td class="bluestyle"><a onclick="loadView('content/teacher_lesson_create.jsp','aaa',{id:3})">查看详情</a></td>
 								<td class="center">
 									<div class="radio"> <label> <input type="radio" name="optionsRadios3" value="y" >通过</label> </div>
 									<div class="radio"> <label> <input type="radio" name="optionsRadios3" value="n" >不通过</label> </div>

@@ -26,7 +26,22 @@
 			<div class="panel-body">
 				<div class="table-responsive">
 					<!-- 此处填充内容 -->
-					
+					<div style="padding-bottom: 10px;">
+	                    <a href="download/1.docx" class="btn btn-primary">导出所有材料</a>
+	                </div>
+	                <div class="panel panel-default">
+                       <div class="panel-heading">
+                              <h4 class="panel-title">
+                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" style="font-weight: bold;">成绩详情：</a>
+                              </h4>
+                       </div>
+                       <div id="collapseTwo" class="panel-collapse in" style="height: auto;">
+                              <div class="panel-body">
+                              		<!-- 此处填写成绩详情 -->
+                              		此处填写成绩详情
+                              </div>
+                       </div>
+	                </div>
 				</div>
 			</div>
 		</div>

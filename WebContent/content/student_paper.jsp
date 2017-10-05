@@ -47,7 +47,7 @@
 	                </div>
 	                <div style="padding-bottom: 20px;"">
 	                    <a class="btn btn-primary" style="background-color: #EFEFEF;color: blue;"><input type="file"></a>
-	                    <a href="#" class="btn btn-primary">下载论文</a>
+	                    <a class="btn btn-primary" style="padding-left: 20px;" onclick="">提交审批</a>
 	                </div>
 				</div>
 			</div>

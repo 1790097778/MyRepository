@@ -26,7 +26,9 @@
 			<div class="panel-body">
 				<div class="table-responsive">
 					<!-- 此处填充内容 -->
-					
+	                <a class="btn btn-primary" style="background-color: #EFEFEF;color: black;">答辩记录表：<input style="color: blue;" type="file"></a>
+	                <a class="btn btn-primary" style="background-color: #EFEFEF;color: black;">答辩表：<input style="color: blue;" type="file"></a>
+	                <button class="btn btn-primary" style="width: 100px;margin-left: 34%;height: 48px;" onclick="">上传</button>
 				</div>
 			</div>
 		</div>

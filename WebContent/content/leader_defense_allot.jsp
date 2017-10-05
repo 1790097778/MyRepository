@@ -29,7 +29,7 @@
 	  				</div>
 			        <div class="inner">共分为 :<input type="number"/>个组</div>
 			        <div style="padding-top: 15px;"></div>
-			        <div class="inner"><a href="#" class="btn btn-primary btn-sm">开始随机分配</a></div>
+			        <div class="inner"><a onclick="loadView('content/leader_defense.jsp','aaa',{id:3})" class="btn btn-primary btn-sm">开始随机分配</a></div>
 				</div>
 			</div>
 		</div>

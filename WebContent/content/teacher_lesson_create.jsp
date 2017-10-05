@@ -20,7 +20,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<div class="header">
-					<a href="#">课程管理</a>>创建课题
+					<a onclick="loadView('content/teacher_lesson.jsp','aaa',{id:3})">课程管理</a>>创建课题
 				</div>
 			</div>
 			<div class="panel-body">
