@@ -45,7 +45,7 @@
                               </div>
                        </div>
 	                </div>
-	                <div style="padding-bottom: 20px;"">
+	                <div style="padding-bottom: 20px;">
 	                    <a class="btn btn-primary" style="background-color: #EFEFEF;color: blue;"><input type="file"></a>
 	                    <a class="btn btn-primary" style="padding-left: 20px;" onclick="">提交审批</a>
 	                </div>
