@@ -26,7 +26,12 @@
 			<div class="panel-body">
 				<div class="table-responsive">
 					<!-- 此处填充内容 -->
-					
+					<div class="inner">
+		                <div style="padding-bottom: 10px;">主席：张导师</div>
+		                <div style="padding-bottom: 10px;">导师：李导师、王导师...</div>
+		                <div style="padding-bottom: 10px;">时间：2017/10/24</div>                                                       <!--时间地点-->
+		                <div style="padding-bottom: 10px;">地点：3-001</div>
+		            </div>
 				</div>
 			</div>
 		</div>

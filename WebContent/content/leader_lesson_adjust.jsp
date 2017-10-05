@@ -26,7 +26,13 @@
 			<div class="panel-body">
 				<div class="table-responsive">
 					<!-- 此处填充内容 -->
-					
+					<div class="inner">
+			            <div>剩余老师课题: 18个</div>   
+			            <div style="padding-top: 10px;"></div>                                <!--姓名排列需另外实现-->
+			            <div>未选题学生: 17人</div>
+			            <div style="padding-top: 15px;"></div>  
+	  				</div>
+			        <div class="inner"><a href="#" class="btn btn-primary btn-sm">开始随机分配</a></div>
 				</div>
 			</div>
 		</div>

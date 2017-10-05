@@ -26,7 +26,41 @@
 			<div class="panel-body">
 				<div class="table-responsive">
 					<!-- 此处填充内容 -->
-					
+					<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                              	 基本信息
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                      		    <div>名称：光伏太阳能研究</div>
+                      		    <div>学院：理学院</div>
+                      		    <div>专业：光电专业</div>
+                      		    <div>类型：科研</div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                               	 课题内容：
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                        	<!-- 此处应有内容 -->
+                        	此处应有内容
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                         		 课题要求：
+                            </h4>
+                        </div>
+                        <div class="panel-body">
+                        	<!-- 此处应有要求 -->
+                        	此处应有要求
+                        </div>
+                    </div>
 				</div>
 			</div>
 		</div>

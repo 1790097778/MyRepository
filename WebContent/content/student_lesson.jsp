@@ -26,7 +26,34 @@
 			<div class="panel-body">
 				<div class="table-responsive">
 					<!-- 此处填充内容 -->
-					
+					<table class="table table-striped table-bordered table-hover" id="dataTables-example">
+						<thead>
+							<tr>
+								<th>课题编号</th>
+								<!-- <th>出题人</th> -->
+								<th>课程名称</th>
+								<th>课程类型</th>
+								<th>院系</th>
+								<th>详情</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<%
+								while(true){
+									out.print("<tr class=\"gradeX\">");
+									out.print("<td>0002405</td>");
+									//out.print("<td>"+request.getParameter("name")+"</td>");
+									out.print("<td>"+"叶绿体的能量转换率"+"</td>");
+									out.print("<td>"+"科研项目"+"</td>");
+									out.print("<td class=\"center\">"+"理学院"+"</td>");
+									out.print("<td class=\"redstyle\">"+"<a onclick=\"#\">查看详情</a>"+"</td>");
+									out.print("<td class=\"center\"><button onclick=\"#\">放弃选题</button></td></tr>");
+									break;
+								}
+							%>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>

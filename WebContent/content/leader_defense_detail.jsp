@@ -22,14 +22,11 @@
 			<div class="panel-body">
 				<div class="table-responsive">
 					<div class="inner">
-		                <div>主席：</div>
-		                <div style="padding-top: 10px;"></div>  
-		                <div>成员：</div>
-		                <div style="padding-top: 10px;"></div>  
-		                <div>时间：<input type="text"/></div>
-		                <div style="padding-top: 10px;"></div>                                                           <!--时间地点-->
-		                <div>地点：<input type="text"/></div>
-		                <div style="padding-top: 10px;"></div>  
+		                <div style="padding-bottom: 10px;">主席：</div>
+		                <div style="padding-bottom: 10px;">导师：</div>
+		                <div style="padding-bottom: 10px;">学生：</div>
+		                <div style="padding-bottom: 10px;">时间：<input type="text"/></div>                                             <!--时间地点-->
+		                <div style="padding-bottom: 10px;">地点：<input type="text"/></div>
 		                <button onclick="">提交</button>
 		            </div>
 				</div>

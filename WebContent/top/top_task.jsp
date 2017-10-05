@@ -6,7 +6,7 @@
     </a>
     <ul class="dropdown-menu dropdown-tasks">
         <li>
-            <a href="#">
+            <a onclick="loadView('content/student_task_detail.jsp','aaa',{id:3})">
                 <div>
                     <p>
                         <strong>Task 1</strong>

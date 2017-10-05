@@ -26,7 +26,13 @@
 			<div class="panel-body">
 				<div class="table-responsive">
 					<!-- 此处填充内容 -->
-					
+					<div class="inner">
+						<div class="form-group">
+                			<label>公告：</label>
+                			<textarea class="form-control" rows="7" style="resize:none;"></textarea>
+            			</div> 
+            		</div>
+            		<button name="submit">发布</button>
 				</div>
 			</div>
 		</div>
