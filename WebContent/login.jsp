@@ -102,7 +102,7 @@ PS：{name1:value1,name2:value2}表示两个参数，其中参数1（name1）的
 	    		if(data.error=="name")alert("没有此用户，请检查账号！");
 	    		if(data.error=="password")alert("密码错误！");
 	    		if(data.error=="success"){
-	    			location.href ="main.jsp;
+	    			location.href ="main.jsp";
 	    		}
 	    	},
 	    	error: function(XMLHttpRequest, textStatus, errorThrown) {

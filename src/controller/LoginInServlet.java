@@ -87,12 +87,13 @@ public class LoginInServlet extends HttpServlet {
 				//Save in session 
 				HttpSession hSession =  request.getSession();
 				hSession.setAttribute("user", list.get(0));
-				hSession.setAttribute("power", /*power*/"111111000000000");
-				
+				hSession.setAttribute("power", /*power*/"111111111111111");
+
+				response.getWriter().print("{\"error\":\"success\"}");/*
 				request.getRequestDispatcher("main.jsp").forward(request, response);
 				System.out.println("test:"+power+"\npwid="+list.get(0).getStPowerid());
 				//Return power 
-				response.getWriter().print("{\"error\":\"success\"}");
+				response.getWriter().print("{\"error\":\"success\"}");*/
 			}
 		}
 		default:
