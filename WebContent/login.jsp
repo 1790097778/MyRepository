@@ -16,13 +16,6 @@
 
 <!-- jQuery Js -->
 <script src="assets/js/jquery-1.10.2.js"></script>
-
-<script type="text/javascript" language="javascript">
-function cheak(){
-	
-}
-</script>
-
 </head>
 
 <%
