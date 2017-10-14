@@ -19,13 +19,20 @@
 
 <body>
 	<%
-		String userSession[]=session.getValueNames();
-		try{
-			if(userSession[0]==null){
-				%><script type="text/javascript">location.href ="login.jsp?error=\"请先登录！\"";</script><%
-			}
-		}catch(Exception e){
+		String power=session.getAttribute("power").toString();
+		boolean[] top=new boolean[3],left=new boolean[12];
+		if(power==null||power.equals("")){
 			%><script type="text/javascript">location.href ="login.jsp?error=unlogin";</script><%
+		}else{
+			char[] tmpPower = power.toCharArray();
+			for(int i=0;i<3;i++){
+				if(tmpPower[i]=='0')top[i]=false;
+				else top[i]=true;
+			}
+			for(int j=0,i=3;j<12;i++,j++){
+				if(tmpPower[i]=='0')left[j]=false;
+				else left[j]=true;
+			}
 		}
 	%>
     <div id="wrapper">
@@ -43,9 +50,9 @@
             </div>
             <ul class="nav navbar-top-links navbar-right">
             	<%
-                	if(true){%><%@include file="top/top_message.jsp"%><%;}
-                 	if(true){%><%@include file="top/top_task.jsp" %><%;}
-					if(true){%><%@include file="top/top_alert.jsp" %><%;}
+                	if(top[0]){%><%@include file="top/top_message.jsp"%><%;}
+                 	if(top[1]){%><%@include file="top/top_task.jsp" %><%;}
+					if(top[2]){%><%@include file="top/top_alert.jsp" %><%;}
 				%>
                 <%@include file="top/top_userInfo.jsp" %>
             </ul>
@@ -57,20 +64,20 @@
                 	<ul class="nav" id="main-menu">
                     	<%
                     		//学生左槽
-                   	 		if(true){%><%@include file="left/student_lesson.jsp"%><%;}
-                    		if(true){%><%@include file="left/student_paper.jsp" %><%;}
-							if(true){%><%@include file="left/student_grades.jsp" %><%;}
+                   	 		if(left[0]){%><%@include file="left/student_lesson.jsp"%><%;}
+                    		if(left[1]){%><%@include file="left/student_paper.jsp" %><%;}
+							if(left[2]){%><%@include file="left/student_grades.jsp" %><%;}
 							//老师左槽
-							if(true){%><%@include file="left/teacher_lesson.jsp" %><%;}
-							if(true){%><%@include file="left/teacher_student.jsp" %><%;}
-							if(true){%><%@include file="left/teacher_chat.jsp" %><%;}
-							if(true){%><%@include file="left/teacher_defense.jsp" %><%;}
-							if(true){%><%@include file="left/teacher_upload.jsp" %><%;}
-							if(true){%><%@include file="left/teacher_paper.jsp" %><%;}
+							if(left[3]){%><%@include file="left/teacher_lesson.jsp" %><%;}
+							if(left[4]){%><%@include file="left/teacher_student.jsp" %><%;}
+							if(left[5]){%><%@include file="left/teacher_chat.jsp" %><%;}
+							if(left[6]){%><%@include file="left/teacher_defense.jsp" %><%;}
+							if(left[7]){%><%@include file="left/teacher_upload.jsp" %><%;}
+							if(left[8]){%><%@include file="left/teacher_paper.jsp" %><%;}
 							//负责人左槽
-                   	 		if(true){%><%@include file="left/leader_lesson.jsp"%><%;}
-                   	 		if(true){%><%@include file="left/leader_defense.jsp"%><%;}
-                   	 		if(true){%><%@include file="left/leader_notice.jsp"%><%;}
+                   	 		if(left[9]){%><%@include file="left/leader_lesson.jsp"%><%;}
+                   	 		if(left[10]){%><%@include file="left/leader_defense.jsp"%><%;}
+                   	 		if(left[11]){%><%@include file="left/leader_notice.jsp"%><%;}
 						%>
                 	</ul>
             	</div>

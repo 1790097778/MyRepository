@@ -14,6 +14,9 @@
 <link type="text/css" href="assets/other/global_fonts.css" rel="stylesheet">
 <link type="text/css" href="assets/other/styles.css" rel="stylesheet">
 
+<!-- jQuery Js -->
+<script src="assets/js/jquery-1.10.2.js"></script>
+
 <script type="text/javascript" language="javascript">
 function cheak(){
 	
@@ -39,7 +42,6 @@ PS：{name1:value1,name2:value2}表示两个参数，其中参数1（name1）的
 <body class="body_UQVCAY" data-c_tl_id="M_c54ddfcffb39c610">
 	<%
 		String e = request.getParameter("error");
-		System.out.print("test:"+e);
 		if(e != null){
 			if(e.equals("name")){%><script type="text/javascript">alert("没有此用户，请检查账号！");</script><%;}
 			if(e.equals("password")){%><script type="text/javascript">alert("密码错误！");</script><%;}
@@ -54,24 +56,16 @@ PS：{name1:value1,name2:value2}表示两个参数，其中参数1（name1）的
 				<div
 					class="col-lg-6 col-md-6 col-sm-6 col-xs-12 c-column column_EXJ39w">
 					<p class="paragraph_ziD2v8">登陆：</p>
-					<form
-						action="loginIn" class="c-form form_mgltEd" data-redirect="/success" method="post"
-						name="form" onsubmit="cheak()">
-						<label class="c-label label_hq1X7i">账号: </label><input
-							autofocus="True" class="c-input input_ju04Ga" name="name"
-							placeholder="请输入账号" required="True" type="text"
-						><label
-							class="c-label label_3UG6Ic">密码:</label>
-							<input class="c-input input_8FlkY6" title="请填写密码" name="password" placeholder="请输入密码"
-							required="True" type="password">
+						<label class="c-label label_hq1X7i">账号: </label>
+						<input autofocus="True" class="c-input input_ju04Ga" placeholder="请输入账号" required="True" type="text" id="name">
+						<label class="c-label label_3UG6Ic">密码: </label>
+						<input class="c-input input_8FlkY6" title="请填写密码" placeholder="请输入密码" required="True" type="password" id="password">
 						<div class="checkbox c-checkbox checkbox_HIxYhD">
-							<input class="c-checkbox-input checkboxinput_rJ8h62"
-								name="keepload" type="checkbox"><label
-								class="c-form-label formlabel_JHMH8L">保持登陆</label>
+							<input class="c-checkbox-input checkboxinput_rJ8h62" name="keepload" type="checkbox">
+							<label class="c-form-label formlabel_JHMH8L">保持登陆</label>
 						</div>
 						<label class="c-label label_pkAnzK">忘记密码？</label>
-						<button class="submit_n7xCQ7" name="" type="submit" wait="">登录</button>
-					</form>
+						<button class="submit_n7xCQ7" onclick="cheak()">登录</button>
 				</div>
 				<div
 					class="col-lg-6 col-md-6 col-sm-6 col-xs-12 c-column column_mvZe5k">
@@ -81,5 +75,47 @@ PS：{name1:value1,name2:value2}表示两个参数，其中参数1（name1）的
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+	function cheak(){
+		var name=document.getElementById("name");
+		var password=document.getElementById("password");
+		if(name.value==""){name.focus();return 0;}
+		if(password.value==""){password.focus();return 0;}
+		if(10>11){
+			name.empty();
+			name.focus();
+			return 0;
+		}
+		login("loginIn",{name:name.value,password:password.value});
+	}
+	function login(mothod_name,send_data){
+	    $.ajax({
+	    	global:false,
+	    	async:true,
+	    	type: "post",
+	    	dataType:"json",
+	    	data:send_data,
+	    	url:mothod_name,
+	    	beforeSend:function(){
+	    	},
+	    	success:function(data){
+	    		if(data.error=="name")alert("没有此用户，请检查账号！");
+	    		if(data.error=="password")alert("密码错误！");
+	    		if(data.error=="success"){
+	    			location.href ="main.jsp;
+	    		}
+	    	},
+	    	error: function(XMLHttpRequest, textStatus, errorThrown) {
+	    		 var errorMsg="error in $.ajax()"+
+	    			 		  "&error=XMLHttpRequest.status:"+XMLHttpRequest.status+
+	    		 			  "&error=XMLHttpRequest.readyState:"+XMLHttpRequest.readyState+
+	    		 			  "&error=textStatus:"+textStatus+
+	    		 			  "&error=errorThrown:"+errorThrown;
+	    		 $("#wrapper").empty();
+	    		 location.href ="content/msg_error.jsp?error="+errorMsg;
+	    	}
+	    });
+	}
+	</script>
 </body>
 </html>
