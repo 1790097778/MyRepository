@@ -5,60 +5,78 @@
 	<artifactId>MyRepository</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	
-	<dependencies>  
-        <!-- expectj -->  
-        <dependency>  
-            <groupId>org.springframework</groupId>  
-            <artifactId>spring-aspects</artifactId>  
-            <version>4.0.4.RELEASE</version>  
-        </dependency>  
-        <!-- junit -->  
-        <dependency>  
-            <groupId>junit</groupId>  
-            <artifactId>junit</artifactId>  
-            <version>4.11</version>  
-            <scope>test</scope>  
-        </dependency>  
-        <!-- spring -->  
-        <dependency>  
-            <groupId>org.springframework</groupId>  
-            <artifactId>spring-context</artifactId>  
-            <version>4.1.0.RELEASE</version>  
-        </dependency>  
-        <dependency>  
-            <groupId>org.springframework.ws</groupId>  
-            <artifactId>spring-ws-core</artifactId>  
-            <version>2.2.0.RELEASE</version>  
-        </dependency>  
-        <dependency>  
-            <groupId>org.springframework</groupId>  
-            <artifactId>spring-orm</artifactId>  
-            <version>4.1.1.RELEASE</version>  
-        </dependency>  
-        <!-- hibernate -->  
-        <dependency>  
-            <groupId>org.hibernate</groupId>  
-            <artifactId>hibernate-core</artifactId>  
-            <version>4.3.6.Final</version>  
-        </dependency>  
-        <!-- dbcp -->  
-        <dependency>  
-            <groupId>commons-dbcp</groupId>  
-            <artifactId>commons-dbcp</artifactId>  
-            <version>1.4</version>  
-        </dependency>  
-        <!-- MYSQL -->  
-        <dependency>  
-            <groupId>mysql</groupId>  
-            <artifactId>mysql-connector-java</artifactId>  
-            <version>5.1.18</version>  
-        </dependency>  
-    </dependencies>  
-  
-    <build>  
-        <finalName>springmvc_spring_hibernate</finalName>  
-    </build>  
+
+	<dependencies>
+		<!-- expectj -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+			<version>4.0.4.RELEASE</version>
+		</dependency>
+		<!-- junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>4.1.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.ws</groupId>
+			<artifactId>spring-ws-core</artifactId>
+			<version>2.2.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>4.1.1.RELEASE</version>
+		</dependency>
+		<!-- hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.3.6.Final</version>
+		</dependency>
+		<!-- dbcp -->
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<!-- MYSQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.18</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.9.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.9.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.1</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>springmvc_spring_hibernate</finalName>
+	</build>
 
 	<properties>
 		<java.version>1.8</java.version>

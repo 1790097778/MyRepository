@@ -1,65 +1,119 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 2017-9-25 0:32:35 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
-    <class catalog="user" dynamic-insert="false" dynamic-update="false" mutable="true" name="entity.DsManagerinfo" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="ds_managerinfo">
-        <id name="mgId" type="java.lang.Integer">
-            <column name="mg_Id"/>
-            <generator class="identity"/>
-        </id>
-        <property generated="never" lazy="false" name="mgCollegeid" optimistic-lock="true" type="java.lang.Integer" unique="false">
-            <column name="mg_collegeid">
-                <comment>学院ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="mgMajorid" optimistic-lock="true" type="java.lang.Integer" unique="false">
-            <column name="mg_majorid">
-                <comment>专业ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="mgClassid" optimistic-lock="true" type="java.lang.Integer" unique="false">
-            <column name="mg_classid">
-                <comment>ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="mgReplyid" optimistic-lock="true" type="int" unique="false">
-            <column name="mg_replyid" not-null="true">
-                <comment>答辩ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="mgPaperid" optimistic-lock="true" type="java.lang.Integer" unique="false">
-            <column name="mg_paperid">
-                <comment>论文ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="mgPowerid" optimistic-lock="true" type="int" unique="false">
-            <column name="mg_powerid" not-null="true">
-                <comment>权限ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="mgStuname" optimistic-lock="true" type="string" unique="false">
-            <column length="30" name="mg_stuname" not-null="true">
-                <comment>姓名</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="mgUsername" optimistic-lock="true" type="string" unique="false">
-            <column length="11" name="mg_username" not-null="true">
-                <comment>工号</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="mgPassword" optimistic-lock="true" type="string" unique="false">
-            <column length="11" name="mg_password" not-null="true">
-                <comment>密码</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="mgTelnumber" optimistic-lock="true" type="string" unique="false">
-            <column length="11" name="mg_telnumber">
-                <comment>手机号码</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="mgEmail" optimistic-lock="true" type="string" unique="false">
-            <column length="20" name="mg_email">
-                
-            </column>
-        </property>
-    </class>
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Generated 2017-10-14 23:08:04 by Hibernate Tools 5.2.3.Final -->
+<hibernate-mapping>
+
+<class
+    name="entity.DsManagerinfo"
+    table="ds_managerinfo"
+    catalog="design"
+    optimistic-lock="version"
+>
+
+	<id 
+        name="mgId"
+        type="java.lang.Integer"
+    >
+    
+<column name="mg_Id" />
+	    <generator class="identity" />
+    </id>
+
+
+
+
+    <property
+        name="mgCollegeid"
+	    type="java.lang.Integer"
+    >
+<column name="mg_collegeid" >
+
+</column>  </property>
+
+    <property
+        name="mgMajorid"
+	    type="java.lang.Integer"
+    >
+<column name="mg_majorid" >
+
+</column>  </property>
+
+    <property
+        name="mgClassid"
+	    type="java.lang.Integer"
+    >
+<column name="mg_classid" >
+
+</column>  </property>
+
+    <property
+        name="mgReplyid"
+	    type="int"
+    >
+<column name="mg_replyid" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="mgPaperid"
+	    type="java.lang.Integer"
+    >
+<column name="mg_paperid" >
+
+</column>  </property>
+
+    <property
+        name="mgPowerid"
+	    type="int"
+    >
+<column name="mg_powerid" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="mgStuname"
+	    type="string"
+    >
+<column name="mg_stuname" length="30" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="mgUsername"
+	    type="string"
+    >
+<column name="mg_username" length="10" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="mgPassword"
+	    type="string"
+    >
+<column name="mg_password" length="11" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="mgTelnumber"
+	    type="string"
+    >
+<column name="mg_telnumber" length="11" >
+
+</column>  </property>
+
+    <property
+        name="mgEmail"
+	    type="string"
+    >
+<column name="mg_email" length="20" >
+
+</column>  </property>
+
+
+</class>
+
 </hibernate-mapping>

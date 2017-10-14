@@ -25,7 +25,7 @@ public class DatabaseManager {
 		Configuration cfg = new Configuration();
 		cfg.configure("hibernate.cfg.xml");// populates the data of the
 											// configuration file
-
+		
 		// creating session factory object
 		SessionFactory factory = cfg.buildSessionFactory();
 

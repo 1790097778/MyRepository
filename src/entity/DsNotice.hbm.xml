@@ -1,30 +1,63 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 2017-9-25 0:32:35 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
-    <class catalog="user" dynamic-insert="false" dynamic-update="false" mutable="true" name="entity.DsNotice" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="ds_notice">
-        <id name="ntId" type="java.lang.Integer">
-            <column name="nt_id"/>
-            <generator class="identity"/>
-        </id>
-        <property generated="never" lazy="false" name="ntPublisherid" optimistic-lock="true" type="int" unique="false">
-            <column name="nt_publisherid" not-null="true">
-                <comment>发布者ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="ntCollegeid" optimistic-lock="true" type="int" unique="false">
-            <column name="nt_collegeid" not-null="true">
-                <comment>学院ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="ntTime" optimistic-lock="true" type="string" unique="false">
-            <column length="8" name="nt_time" not-null="true">
-                <comment>时间</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="ntContent" optimistic-lock="true" type="string" unique="false">
-            <column name="nt_content" not-null="true">
-                <comment>内</comment>
-            </column>
-        </property>
-    </class>
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Generated 2017-10-14 23:08:04 by Hibernate Tools 5.2.3.Final -->
+<hibernate-mapping>
+
+<class
+    name="entity.DsNotice"
+    table="ds_notice"
+    catalog="design"
+    optimistic-lock="version"
+>
+
+	<id 
+        name="ntId"
+        type="java.lang.Integer"
+    >
+    
+<column name="nt_id" />
+	    <generator class="identity" />
+    </id>
+
+
+
+
+    <property
+        name="ntPublisherid"
+	    type="int"
+    >
+<column name="nt_publisherid" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="ntCollegeid"
+	    type="int"
+    >
+<column name="nt_collegeid" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="ntTime"
+	    type="string"
+    >
+<column name="nt_time" length="8" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="ntContent"
+	    type="string"
+    >
+<column name="nt_content" not-null="true" >
+
+</column>  </property>
+
+
+</class>
+
 </hibernate-mapping>

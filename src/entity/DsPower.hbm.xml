@@ -1,85 +1,114 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 2017-9-25 0:32:35 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
-    <class catalog="user" dynamic-insert="false" dynamic-update="false" mutable="true" name="entity.DsPower" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="ds_power">
-        <id name="pwId" type="java.lang.Integer">
-            <column name="pw_id"/>
-            <generator class="identity"/>
-        </id>
-        <property generated="never" lazy="false" name="pwUsertype" optimistic-lock="true" type="string" unique="false">
-            <column length="25" name="pw_usertype" not-null="true">
-                <comment>类型名称</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="pwPagepower" optimistic-lock="true" type="string" unique="false">
-            <column length="50" name="pw_pagepower" not-null="true">
-                <comment>页面查看权限</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="pwStudentinfo" optimistic-lock="true" type="string" unique="false">
-            <column length="8" name="pw_studentinfo" not-null="true">
-                <comment>学生信息表操作权</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="pwManagerinfo" optimistic-lock="true" type="string" unique="false">
-            <column length="8" name="pw_managerinfo" not-null="true">
-                <comment>管理用户信息操作权限</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="pwSupermanager" optimistic-lock="true" type="string" unique="false">
-            <column length="8" name="pw_supermanager" not-null="true">
-                <comment>管理员信作权</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="pwSubject" optimistic-lock="true" type="string" unique="false">
-            <column length="8" name="pw_subject" not-null="true">
-                <comment>题目表操作权</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="pwTask" optimistic-lock="true" type="string" unique="false">
-            <column length="8" name="pw_task" not-null="true">
-                <comment>任务表操作权</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="pwNotice" optimistic-lock="true" type="string" unique="false">
-            <column length="8" name="pw_notice" not-null="true">
-                <comment>表操作权</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="pwPaper" optimistic-lock="true" type="string" unique="false">
-            <column length="8" name="pw_paper" not-null="true">
-                <comment>论文表操作权</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="pwChat" optimistic-lock="true" type="string" unique="false">
-            <column length="8" name="pw_chat" not-null="true">
-                <comment>聊天表操作权</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="pwApplyalloat" optimistic-lock="true" type="string" unique="false">
-            <column length="8" name="pw_applyalloat" not-null="true">
-                <comment>答辩分配表操作权</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="pwCollege" optimistic-lock="true" type="string" unique="false">
-            <column length="8" name="pw_college" not-null="true">
-                <comment>学院表操作权</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="pwMajor" optimistic-lock="true" type="string" unique="false">
-            <column length="8" name="pw_major" not-null="true">
-                <comment>专业表操作权</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="pwClass" optimistic-lock="true" type="string" unique="false">
-            <column length="8" name="pw_class" not-null="true">
-                <comment>表操作权</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="pwPower" optimistic-lock="true" type="string" unique="false">
-            <column length="8" name="pw_power" not-null="true">
-                <comment>权限表操作权</comment>
-            </column>
-        </property>
-    </class>
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Generated 2017-10-14 23:08:04 by Hibernate Tools 5.2.3.Final -->
+<hibernate-mapping>
+
+	<class name="entity.DsPower" table="ds_power" catalog="design"
+		optimistic-lock="version">
+
+		<id name="pwId" type="java.lang.Integer">
+
+			<column name="pw_id" />
+			<generator class="identity" />
+		</id>
+
+
+
+
+		<property name="pwUsertype" type="string">
+			<column name="pw_usertype" length="25" not-null="true">
+
+			</column>
+		</property>
+
+		<property name="pwPagepower" type="string">
+			<column name="pw_pagepower" length="50" not-null="true">
+
+			</column>
+		</property>
+
+		<property name="pwStudentinfo" type="string">
+			<column name="pw_studentinfo" length="8" not-null="true">
+
+			</column>
+		</property>
+
+		<property name="pwManagerinfo" type="string">
+			<column name="pw_managerinfo" length="8" not-null="true">
+
+			</column>
+		</property>
+
+		<property name="pwSupermanager" type="string">
+			<column name="pw_supermanager" length="8" not-null="true">
+
+			</column>
+		</property>
+
+		<property name="pwSubject" type="string">
+			<column name="pw_subject" length="8" not-null="true">
+
+			</column>
+		</property>
+
+		<property name="pwTask" type="string">
+			<column name="pw_task" length="8" not-null="true">
+
+			</column>
+		</property>
+
+		<property name="pwNotice" type="string">
+			<column name="pw_notice" length="8" not-null="true">
+
+			</column>
+		</property>
+
+		<property name="pwPaper" type="string">
+			<column name="pw_paper" length="8" not-null="true">
+
+			</column>
+		</property>
+
+		<property name="pwChat" type="string">
+			<column name="pw_chat" length="8" not-null="true">
+
+			</column>
+		</property>
+
+		<property name="pwApplyalloat" type="string">
+			<column name="pw_applyalloat" length="8" not-null="true">
+
+			</column>
+		</property>
+
+		<property name="pwCollege" type="string">
+			<column name="pw_college" length="8" not-null="true">
+
+			</column>
+		</property>
+
+		<property name="pwMajor" type="string">
+			<column name="pw_major" length="8" not-null="true">
+
+			</column>
+		</property>
+
+		<property name="pwClass" type="string">
+			<column name="pw_class" length="8" not-null="true">
+
+			</column>
+		</property>
+
+		<property name="pwPower" type="string">
+			<column name="pw_power" length="8" not-null="true">
+
+			</column>
+		</property>
+
+
+	</class>
+
 </hibernate-mapping>

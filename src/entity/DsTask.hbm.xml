@@ -1,60 +1,111 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 2017-9-25 0:32:35 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
-    <class catalog="user" dynamic-insert="false" dynamic-update="false" mutable="true" name="entity.DsTask" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="ds_task">
-        <id name="tkId" type="java.lang.Integer">
-            <column name="tk_id"/>
-            <generator class="identity"/>
-        </id>
-        <property generated="never" lazy="false" name="tkCollegeid" optimistic-lock="true" type="int" unique="false">
-            <column name="tk_collegeid" not-null="true">
-                <comment>学院ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="tkMajorid" optimistic-lock="true" type="int" unique="false">
-            <column name="tk_majorid" not-null="true">
-                <comment>专业ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="tkStudentid" optimistic-lock="true" type="int" unique="false">
-            <column name="tk_studentid" not-null="true">
-                <comment>学生ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="tkTeacherid" optimistic-lock="true" type="int" unique="false">
-            <column name="tk_teacherid" not-null="true">
-                <comment>导师ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="tkLasttime" optimistic-lock="true" type="string" unique="false">
-            <column length="8" name="tk_lasttime" not-null="true">
-                <comment>时间</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="tkContent" optimistic-lock="true" type="string" unique="false">
-            <column name="tk_content" not-null="true">
-                <comment>任务内</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="tkState" optimistic-lock="true" type="string" unique="false">
-            <column length="2" name="tk_state" not-null="true">
-                <comment>状(0为未通过为核为</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="trContent" optimistic-lock="true" type="string" unique="false">
-            <column length="65535" name="tr_content">
-                <comment>任务汇报内</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="trData" optimistic-lock="true" type="string" unique="false">
-            <column length="100" name="tr_data">
-                <comment>任务汇报附件(存放地址)</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="trRemark" optimistic-lock="true" type="string" unique="false">
-            <column name="tr_remark">
-                <comment>老师指</comment>
-            </column>
-        </property>
-    </class>
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Generated 2017-10-14 23:08:04 by Hibernate Tools 5.2.3.Final -->
+<hibernate-mapping>
+
+<class
+    name="entity.DsTask"
+    table="ds_task"
+    catalog="design"
+    optimistic-lock="version"
+>
+
+	<id 
+        name="tkId"
+        type="java.lang.Integer"
+    >
+    
+<column name="tk_id" />
+	    <generator class="identity" />
+    </id>
+
+
+
+
+    <property
+        name="tkCollegeid"
+	    type="int"
+    >
+<column name="tk_collegeid" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="tkMajorid"
+	    type="int"
+    >
+<column name="tk_majorid" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="tkStudentid"
+	    type="int"
+    >
+<column name="tk_studentid" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="tkTeacherid"
+	    type="int"
+    >
+<column name="tk_teacherid" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="tkLasttime"
+	    type="string"
+    >
+<column name="tk_lasttime" length="8" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="tkContent"
+	    type="string"
+    >
+<column name="tk_content" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="tkState"
+	    type="string"
+    >
+<column name="tk_state" length="2" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="trContent"
+	    type="string"
+    >
+<column name="tr_content" length="65535" >
+
+</column>  </property>
+
+    <property
+        name="trData"
+	    type="string"
+    >
+<column name="tr_data" length="100" >
+
+</column>  </property>
+
+    <property
+        name="trRemark"
+	    type="string"
+    >
+<column name="tr_remark" >
+
+</column>  </property>
+
+
+</class>
+
 </hibernate-mapping>

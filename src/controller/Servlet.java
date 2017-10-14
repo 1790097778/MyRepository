@@ -44,7 +44,7 @@ public class Servlet extends HttpServlet {
 		System.out.println("test:"+request.getParameter("id"));
 		response.setContentType("application/json; charset=utf-8");  
         response.setCharacterEncoding("UTF-8");  
-        /*for(int i=0;i<100;i++)System.out.println("1");*/
+        
 		response.getWriter().print("{\"name\":\"ÖìÖì\"}");
 	}
 

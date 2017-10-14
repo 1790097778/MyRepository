@@ -1,180 +1,303 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 2017-9-25 0:32:35 by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
-    <class catalog="user" dynamic-insert="false" dynamic-update="false" mutable="true" name="entity.DsPaper" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="ds_paper">
-        <id name="ppId" type="java.lang.Integer">
-            <column name="pp_id"/>
-            <generator class="identity"/>
-        </id>
-        <property generated="never" lazy="false" name="ppStudentid" optimistic-lock="true" type="int" unique="false">
-            <column name="pp_studentid" not-null="true">
-                <comment>学生ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="ppCollegeid" optimistic-lock="true" type="int" unique="false">
-            <column name="pp_collegeid" not-null="true">
-                <comment>学院ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="ppMajorid" optimistic-lock="true" type="int" unique="false">
-            <column name="pp_majorid" not-null="true">
-                <comment>专业ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="ppClassid" optimistic-lock="true" type="int" unique="false">
-            <column name="pp_classid" not-null="true">
-                <comment>ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="ppTeacherid" optimistic-lock="true" type="int" unique="false">
-            <column name="pp_teacherid" not-null="true">
-                <comment>指老师ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="ppJudgerid" optimistic-lock="true" type="int" unique="false">
-            <column name="pp_judgerid" not-null="true">
-                <comment>评员ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="ppReplyid" optimistic-lock="true" type="int" unique="false">
-            <column name="pp_replyid" not-null="true">
-                <comment>答辩小组ID</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="ppTeacheradvice" optimistic-lock="true" type="string" unique="false">
-            <column length="65535" name="pp_teacheradvice" not-null="true">
-                <comment>导师论文指意</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="ppContent" optimistic-lock="true" type="string" unique="false">
-            <column length="1" name="pp_content" not-null="true">
-                <comment>论文内(存放地址)</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="ppState" optimistic-lock="true" type="string" unique="false">
-            <column length="2" name="pp_state" not-null="true">
-                <comment>通过状�?(0为不通过审核为</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="rpContentscore" optimistic-lock="true" type="double" unique="false">
-            <column name="rp_contentscore" not-null="true" precision="3" scale="1">
-                <comment>报告内评分-答辩</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="rpReportscore" optimistic-lock="true" type="double" unique="false">
-            <column name="rp_reportscore" not-null="true" precision="3" scale="1">
-                <comment>报告过程评分-答辩</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="rpInnovatescore" optimistic-lock="true" type="double" unique="false">
-            <column name="rp_innovatescore" not-null="true" precision="3" scale="1">
-                <comment>创新评分-答辩</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="rpReplyscore" optimistic-lock="true" type="double" unique="false">
-            <column name="rp_replyscore" not-null="true" precision="3" scale="1">
-                <comment>答辩评分-答辩</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="rpReplyremark" optimistic-lock="true" type="double" unique="false">
-            <column name="rp_replyremark" not-null="true" precision="3" scale="1">
-                <comment>答辩组评�答辩</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="rpDefenseremark" optimistic-lock="true" type="double" unique="false">
-            <column name="rp_defenseremark" not-null="true" precision="3" scale="1">
-                <comment>答辩委员会意答辩</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="rpRecordlist" optimistic-lock="true" type="string" unique="false">
-            <column length="100" name="rp_recordlist" not-null="true">
-                <comment>记录档地址-答辩</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="rpTotalscore" optimistic-lock="true" type="double" unique="false">
-            <column name="rp_totalscore" not-null="true" precision="3" scale="1">
-                <comment>答辩总分-答辩</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="jfJudgerscores" optimistic-lock="true" type="float" unique="false">
-            <column name="jf_judgerscores" not-null="true" precision="3" scale="1">
-                <comment>评阅人评评阅</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="jfScores1" optimistic-lock="true" type="float" unique="false">
-            <column name="jf_scores1" not-null="true" precision="3" scale="1">
-                <comment>文字表达评分-评阅</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="jfScores2" optimistic-lock="true" type="float" unique="false">
-            <column name="jf_scores2" not-null="true" precision="3" scale="1">
-                <comment>水平与实际能力评�?评阅</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="jfScores3" optimistic-lock="true" type="float" unique="false">
-            <column name="jf_scores3" not-null="true" precision="12" scale="0">
-                <comment>工作量评�评阅</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="jfScores4" optimistic-lock="true" type="float" unique="false">
-            <column name="jf_scores4" not-null="true" precision="3" scale="1">
-                <comment>学习内与范求评评阅</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="jfScores5" optimistic-lock="true" type="float" unique="false">
-            <column name="jf_scores5" not-null="true" precision="12" scale="0">
-                <comment>研究成果评分-评阅</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="jfScores6" optimistic-lock="true" type="float" unique="false">
-            <column name="jf_scores6" not-null="true" precision="12" scale="0">
-                <comment>文献阅评分-评阅</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="jfJudgerremark" optimistic-lock="true" type="string" unique="false">
-            <column length="65535" name="jf_judgerremark" not-null="true">
-                <comment>评阅人评评阅</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="tfTeacherscores" optimistic-lock="true" type="float" unique="false">
-            <column name="tf_teacherscores" not-null="true" precision="3" scale="1">
-                <comment>导师评分-导师</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="tfScores1" optimistic-lock="true" type="float" unique="false">
-            <column name="tf_scores1" not-null="true" precision="3" scale="1">
-                <comment>文字表达评分-导师</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="tfScores2" optimistic-lock="true" type="float" unique="false">
-            <column name="tf_scores2" not-null="true" precision="3" scale="1">
-                <comment>水平与实际能力评导师</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="tfScores3" optimistic-lock="true" type="float" unique="false">
-            <column name="tf_scores3" not-null="true" precision="3" scale="1">
-                <comment>工作量评导师</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="tfScores4" optimistic-lock="true" type="float" unique="false">
-            <column name="tf_scores4" not-null="true" precision="3" scale="1">
-                <comment>学习内与范求评导师</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="tfScores5" optimistic-lock="true" type="float" unique="false">
-            <column name="tf_scores5" not-null="true" precision="3" scale="1">
-                <comment>研究成果评分-导师</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="tfScores6" optimistic-lock="true" type="float" unique="false">
-            <column name="tf_scores6" not-null="true" precision="3" scale="1">
-                <comment>文献阅评分-导师</comment>
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="tfTeacherremark" optimistic-lock="true" type="string" unique="false">
-            <column length="65535" name="tf_teacherremark" not-null="true">
-                <comment>导师评-导师</comment>
-            </column>
-        </property>
-    </class>
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Generated 2017-10-14 23:08:04 by Hibernate Tools 5.2.3.Final -->
+<hibernate-mapping>
+
+<class
+    name="entity.DsPaper"
+    table="ds_paper"
+    catalog="design"
+    optimistic-lock="version"
+>
+
+	<id 
+        name="ppId"
+        type="java.lang.Integer"
+    >
+    
+<column name="pp_id" />
+	    <generator class="identity" />
+    </id>
+
+
+
+
+    <property
+        name="ppStudentid"
+	    type="int"
+    >
+<column name="pp_studentid" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="ppCollegeid"
+	    type="int"
+    >
+<column name="pp_collegeid" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="ppMajorid"
+	    type="int"
+    >
+<column name="pp_majorid" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="ppClassid"
+	    type="int"
+    >
+<column name="pp_classid" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="ppTeacherid"
+	    type="int"
+    >
+<column name="pp_teacherid" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="ppJudgerid"
+	    type="int"
+    >
+<column name="pp_judgerid" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="ppReplyid"
+	    type="int"
+    >
+<column name="pp_replyid" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="ppTeacheradvice"
+	    type="string"
+    >
+<column name="pp_teacheradvice" length="65535" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="ppContent"
+	    type="string"
+    >
+<column name="pp_content" length="100" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="ppState"
+	    type="string"
+    >
+<column name="pp_state" length="2" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="rpContentscore"
+	    type="double"
+    >
+<column name="rp_contentscore" precision="3" scale="1" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="rpReportscore"
+	    type="double"
+    >
+<column name="rp_reportscore" precision="3" scale="1" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="rpInnovatescore"
+	    type="double"
+    >
+<column name="rp_innovatescore" precision="3" scale="1" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="rpReplyscore"
+	    type="double"
+    >
+<column name="rp_replyscore" precision="3" scale="1" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="rpReplyremark"
+	    type="double"
+    >
+<column name="rp_replyremark" precision="3" scale="1" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="rpDefenseremark"
+	    type="double"
+    >
+<column name="rp_defenseremark" precision="3" scale="1" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="rpRecordlist"
+	    type="string"
+    >
+<column name="rp_recordlist" length="100" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="rpTotalscore"
+	    type="double"
+    >
+<column name="rp_totalscore" precision="3" scale="1" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="jfJudgerscores"
+	    type="float"
+    >
+<column name="jf_judgerscores" precision="3" scale="1" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="jfScores1"
+	    type="float"
+    >
+<column name="jf_scores1" precision="3" scale="1" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="jfScores2"
+	    type="float"
+    >
+<column name="jf_scores2" precision="3" scale="1" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="jfScores3"
+	    type="float"
+    >
+<column name="jf_scores3" precision="12" scale="0" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="jfScores4"
+	    type="float"
+    >
+<column name="jf_scores4" precision="3" scale="1" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="jfScores5"
+	    type="float"
+    >
+<column name="jf_scores5" precision="12" scale="0" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="jfScores6"
+	    type="float"
+    >
+<column name="jf_scores6" precision="12" scale="0" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="jfJudgerremark"
+	    type="string"
+    >
+<column name="jf_judgerremark" length="65535" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="tfTeacherscores"
+	    type="float"
+    >
+<column name="tf_teacherscores" precision="3" scale="1" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="tfScores1"
+	    type="float"
+    >
+<column name="tf_scores1" precision="3" scale="1" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="tfScores2"
+	    type="float"
+    >
+<column name="tf_scores2" precision="3" scale="1" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="tfScores3"
+	    type="float"
+    >
+<column name="tf_scores3" precision="3" scale="1" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="tfScores4"
+	    type="float"
+    >
+<column name="tf_scores4" precision="3" scale="1" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="tfScores5"
+	    type="float"
+    >
+<column name="tf_scores5" precision="3" scale="1" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="tfScores6"
+	    type="float"
+    >
+<column name="tf_scores6" precision="3" scale="1" not-null="true" >
+
+</column>  </property>
+
+    <property
+        name="tfTeacherremark"
+	    type="string"
+    >
+<column name="tf_teacherremark" length="65535" not-null="true" >
+
+</column>  </property>
+
+
+</class>
+
 </hibernate-mapping>
