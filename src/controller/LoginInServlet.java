@@ -41,6 +41,9 @@ public class LoginInServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		response.setContentType("application/json; charset=utf-8");  
+        response.setCharacterEncoding("UTF-8");
+		
 		Session dSession =DatabaseManager.getDatabaseManager().getSession();
 	
 		DetachedCriteria dc = DetachedCriteria.forClass(DsStudentinfo.class);
@@ -54,8 +57,7 @@ public class LoginInServlet extends HttpServlet {
 		case 0:
 		{
 			System.out.println("there is no data!");
-			request.setAttribute("error", "name");
-			request.getRequestDispatcher("login.jsp").forward(request, response);
+			response.getWriter().print("{\"error\":\"name\"}");
 			break;
 		}
 		//The account exist in database;
@@ -67,8 +69,7 @@ public class LoginInServlet extends HttpServlet {
 				System.out.println(request.getParameter("name")+","+request.getParameter("password")+":"+list.get(0).getStUsername()+","+list.get(0).getStPassword());
 				//The password is wrong
 				System.out.println("wrong password!");
-				request.setAttribute("error", "password");
-				request.getRequestDispatcher("login.jsp").forward(request, response);
+				response.getWriter().print("{\"error\":\"password\"}");
 			}
 			else
 			{
@@ -86,9 +87,12 @@ public class LoginInServlet extends HttpServlet {
 				//Save in session 
 				HttpSession hSession =  request.getSession();
 				hSession.setAttribute("user", list.get(0));
-				hSession.setAttribute("power", power);
+				hSession.setAttribute("power", /*power*/"111111000000000");
 				
 				request.getRequestDispatcher("main.jsp").forward(request, response);
+				System.out.println("test:"+power+"\npwid="+list.get(0).getStPowerid());
+				//Return power 
+				response.getWriter().print("{\"error\":\"success\"}");
 			}
 		}
 		default:
