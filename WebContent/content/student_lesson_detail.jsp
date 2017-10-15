@@ -33,10 +33,12 @@
                             </h4>
                         </div>
                         <div class="panel-body">
-                      		    <div>名称：光伏太阳能研究</div>
-                      		    <div>学院：理学院</div>
-                      		    <div>专业：光电专业</div>
-                      		    <div>类型：科研</div>
+                        		<%
+                        			out.print("<div>名称："+request.getParameter("sb_name")+"</div>");
+	                        		out.print("<div>学院："+request.getParameter("sb_college")+"</div>");
+	                        		out.print("<div>专业："+request.getParameter("sb_major")+"</div>");
+	                        		out.print("<div>类型："+request.getParameter("sb_type")+"</div>");
+                        		%>
                         </div>
                     </div>
                     <div class="panel panel-default">
@@ -47,7 +49,9 @@
                         </div>
                         <div class="panel-body">
                         	<!-- 此处应有内容 -->
-                        	此处应有内容
+                        	<%
+                       			out.print(request.getParameter("sb_content"));
+                        	%>
                         </div>
                     </div>
                     <div class="panel panel-default">
@@ -58,14 +62,16 @@
                         </div>
                         <div class="panel-body">
                         	<!-- 此处应有要求 -->
-                        	此处应有要求
+                        	<%
+                       			out.print(request.getParameter("sb_comments"));
+                        	%>
                         </div>
                     </div>
 					<div style="text-align: left;">
-						<button onclick="loadView('content/student_lesson_choose.jsp','aaa',{id:3})" style="margin: auto;">返回</button>
+						<button onclick="loadView('content/student_lesson_choose.jsp','student/lesson/choose',{page_number:"+<%=Integer.parseInt(request.getParameter("page_number"))%>+"})" style="margin: auto;">返回</button>
 					</div>
 					<div style="text-align: center;margin-top: -25px;">
-						<button onclick="loadView('content/student_lesson.jsp','aaa',{id:3})" style="margin: auto;">选择课题</button>
+						<button onclick="loadView('content/student_lesson.jsp','student/lesson',{sb_id:"+<%=Integer.parseInt(request.getParameter("sb_id"))%>+"})" style="margin: auto;">选择课题</button>
 					</div>
 				</div>
 			</div>

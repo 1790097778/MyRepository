@@ -84,7 +84,7 @@
 					<div style="text-align: right;"><button style="margin: auto;width: 120px;">保存</button></div>
 					<div style="text-align: center;margin-top: -25px;">
 						<div style="margin: auto;">
-							<button style="padding-right: 10px;">上一页</button>
+							<button style="padding-right: 10px;" onclick="bb()">上一页</button>
 							1/1
 							<button style="padding-left: 10px;">下一页</button>
 						</div>
@@ -95,5 +95,12 @@
 		<!--End Advanced Tables -->
 	</div>
 </div>
+<script type="text/javascript">
+function bb(){
+	var radionum = document.getElementById("radios123");
+	if(radionum!=null)alert(radionum.value);
+	else alert("test:NullExcpetion!");
+}
+</script>
 </body>
 </html>

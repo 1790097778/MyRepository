@@ -58,7 +58,7 @@ PS：{name1:value1,name2:value2}表示两个参数，其中参数1（name1）的
 							<label class="c-form-label formlabel_JHMH8L">保持登陆</label>
 						</div>
 						<label class="c-label label_pkAnzK">忘记密码？</label>
-						<button class="submit_n7xCQ7" onclick="cheak()">登录</button>
+						<button class="submit_n7xCQ7" onclick="cheak()" type="submit">登录</button>
 				</div>
 				<div
 					class="col-lg-6 col-md-6 col-sm-6 col-xs-12 c-column column_mvZe5k">
