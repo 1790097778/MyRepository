@@ -21,7 +21,12 @@
 
 <body>
 	<%
-		String power=session.getAttribute("power").toString();
+		String power=null;
+		try{
+			power=session.getAttribute("power").toString();
+		}catch(Exception e){
+			%><script type="text/javascript">location.href ="login.jsp?error=unlogin";</script><%
+		}
 		boolean[] top=new boolean[3],left=new boolean[12];
 		if(power==null||power.equals("")){
 			%><script type="text/javascript">location.href ="login.jsp?error=unlogin";</script><%

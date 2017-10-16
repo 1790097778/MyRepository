@@ -41,44 +41,39 @@
 						</thead>
 						<tbody>
 							<%
-								while(true){
+								int data_number = Integer.parseInt(request.getParameter("data_number"));
+								String sb_id[]=request.getParameterValues("sb_id"),
+									   sb_name[]=request.getParameterValues("sb_name"),
+									   sb_type[]=request.getParameterValues("sb_type"),
+									   sb_college[]=request.getParameterValues("sb_college"),
+									   sb_major[]=request.getParameterValues("sb_major"),
+									   sb_status[]=request.getParameterValues("sb_status");
+								for(int i=0;i<data_number;i++){
 									out.print("<tr class=\"gradeX\">");
-									out.print("<td><div class=\"radio\"> <label> <input type=\"radio\" name=\"optionsRadios"+"\" id=\"optionsRadios"+"\" value=\"option\" >"+request.getParameter("name")+"</label> </div></td>");
-									out.print("<td>"+"无"+"</td>");
-									out.print("<td>"+"无"+"</td>");
-									out.print("<td class=\"center\">"+"无"+"</td>");
-									out.print("<td class=\"bluestyle\">"+"<a onclick=\"loadView('content/student_lesson_detail.jsp','aaa',{id:3})\">查看详情</a>"+"</td>");
+									sb_id[i]=("000000"+sb_id[i]).substring(("000000"+sb_id[i]).length()-7, ("000000"+sb_id[i]).length());
+									out.print("<td><div class=\"radio\"> <label> <input type=\"radio\" id=\"radios"+i+"\" name=\"optionsRadios\" value=\""+Integer.parseInt(sb_id[i])+"\" >"+sb_id[i]+"</label> </div></td>");
+									out.print("<td>"+sb_name[i]+"</td>");
+									out.print("<td>"+sb_type[i]+"</td>");
+									out.print("<td class=\"center\">"+sb_college[i]+"-"+sb_major[i]+"</td>");
+									out.print("<td class=\"bluestyle\">"+"<a onclick=\"loadView('content/student_lesson_detail.jsp','student/lesson/detail',{id:"+Integer.parseInt(sb_id[i])+"})\">查看详情</a>"+"</td>");
 									out.print("<td class=");
-									if(true)out.print("\"redstyle\">"+"可选"+"</td>");
+									if(sb_status[i].equals("1"))out.print("\"redstyle\">"+"可选"+"</td>");
 									else out.print("\"center\">"+"不可选"+"</td>");
 									out.print("</tr>");
-									break;
 								}
 							%>
-							<tr class="gradeX">
-								<td><div class="radio"> <label> <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >0002405</label> </div></td>
-								<td>太阳能电池效率研究</td>
-								<td>科研项目</td>
-								<td class="center">理学院</td>
-								<td class="bluestyle"><a onclick="loadView('content/student_lesson_detail.jsp','aaa',{id:3})">查看详情</a></td>
-								<td class="redstyle">可选</td>
-							</tr>
-							<tr class="gradeX">
-								<td><div class="radio"> <label> <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" >0002406</label> </div></td>
-								<td>共享汽车的商业模式</td>
-								<td>社会调查</td>
-								<td class="center">计算机学院</td>
-								<td class="bluestyle"><a onclick="loadView('content/student_lesson_detail.jsp','aaa',{id:3})">查看详情</a></td>
-								<td class="center">不可选</td>
-							</tr>
 						</tbody>
 					</table>
-					<div style="text-align: left;"><button style="margin: auto;width: 120px;" onclick="loadView('content/student_lesson.jsp','aaa',{id:3})">添加选课</button></div>
+					<div style="text-align: left;"><button style="margin: auto;width: 120px;" onclick="cheak()">添加选课</button></div>
 					<div style="text-align: center;margin-top: -25px;">
 						<div style="margin: auto;">
-							<button style="padding-right: 10px;">上一页</button>
-							1/1
-							<button style="padding-left: 10px;">下一页</button>
+							<%
+								int page_number=Integer.parseInt(request.getParameter("page_number")),
+								    page_maxnumber=Integer.parseInt(request.getParameter("page_maxnumber"));
+								if(page_number>1)out.print("<button style=\"padding-right: 10px;\" onclick=\"loadView('content/student_lesson_choose.jsp','student/lesson/choose',{page_number:"+(page_number-1)+"})\">上一页</button>");
+								out.print(page_number+"/"+page_maxnumber);
+								if(page_number<page_maxnumber)out.print("<button style=\"padding-right: 10px;\" onclick=\"loadView('content/student_lesson_choose.jsp','student/lesson/choose',{page_number:"+(page_number+1)+"})\">下一页</button>");
+							%>
 						</div>
 					</div>
 				</div>
@@ -87,5 +82,16 @@
 		<!--End Advanced Tables -->
 	</div>
 </div>
+<script type="text/javascript">
+function cheak(){
+	var radio = document.getElementById("radios0");
+	for(var i=1;radio!=null;i++){
+		if(radio.checked)
+			loadView('content/student_lesson.jsp','student/lesson',{sb_id:radio.value});
+		radio = document.getElementById("radios"+i);
+	}
+	alert("亲，当前没有选中任何课程哟~");
+}
+</script>
 </body>
 </html>

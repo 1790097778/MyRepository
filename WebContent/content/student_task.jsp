@@ -38,31 +38,23 @@
 						</thead>
 						<tbody>
 							<%
-								while(true){
+								int task_number=Integer.parseInt(request.getParameter("task_number"));
+								String status[]=request.getParameterValues("tk_state"),
+									   id[]=request.getParameterValues("tk_id"),
+								   	   time[]=request.getParameterValues("tk_lasttime"),
+								   	   context[]=request.getParameterValues("tk_content");
+								for(int i=0;i<task_number;i++){
 									out.print("<tr class=\"gradeX\">");
-									out.print("<td>"+"0000121"+"</td>");
-									out.print("<td>"+"2017/10/15"+"</td>");
-									out.print("<td>"+request.getParameter("name")+"...</td>");
-									if(true)out.print("<td class=\"center\">"+"完成"+"</td>");else out.print("<td class=\"redstyle\">"+"未完成"+"</td>");
-									out.print("<td class=\"center\">"+"<a onclick=\"loadView('content/student_task_detail.jsp','aaa',{id:3})\">查看详情</a>"+"</td>");
+									id[i]=("000000"+id[i]).substring(("000000"+id[i]).length()-7, ("000000"+id[i]).length());
+									out.print("<td>"+id[i]+"</td>");
+									out.print("<td>"+time[i]+"</td>");
+									out.print("<td>"+context[i].substring(0,15)+"...</td>");
+									if(status[i].equals("2"))out.print("<td class=\"center\">"+"完成"+"</td>");else out.print("<td class=\"redstyle\">"+"未完成"+"</td>");
+									out.print("<td class=\"center\">"+"<a onclick=\"loadView('content/student_task_detail.jsp','student/task/detail',{tk_id:"+Integer.parseInt(id[i])+"})\">查看详情</a>"+"</td>");
 									out.print("</tr>");
 									break;
 								}
 							%>
-							<tr class="gradeX">
-								<td>0002405</td>
-								<td>2017/10/16</td>
-								<td>科研项目...</td>
-								<td class="redstyle">未完成</td>
-								<td style="color: blue;"><a onclick="loadView('content/student_task_detail.jsp','aaa',{id:3})">查看详情</a></td>
-							</tr>
-							<tr class="gradeX">
-								<td>0002406</td>
-								<td>2017/10/19</td>
-								<td>社会调查...</td>
-								<td class="redstyle">未完成</td>
-								<td style="color: blue;"><a onclick="loadView('content/student_task_detail.jsp','aaa',{id:3})">查看详情</a></td>
-							</tr>
 						</tbody>
 					</table>
 				</div>

@@ -40,13 +40,21 @@
 						</thead>
 						<tbody>
 							<tr class="gradeX">
-								<td>0002405</td>
-								<td>叶绿体的能量转换率</td>
-								<td>科研项目</td>
-								<td class="center">理学院</td>
-								<td class="redstyle"><a onclick="loadView('content/student_lesson_detail.jsp','aaa',{id:3})">查看详情</a></td>
-								<td class="center"><button onclick="loadView('content/student_lesson_choose.jsp','aaa',{id:3})">放弃选题</button></td>
-							</tr>
+								<%
+									String sb_id=request.getParameter("sb_id"),
+									   sb_name=request.getParameter("sb_name"),
+									   sb_type=request.getParameter("sb_type"),
+									   sb_college=request.getParameter("sb_college"),
+									   sb_major=request.getParameter("sb_major"),
+									   sb_status=request.getParameter("sb_status");
+									sb_id=("000000"+sb_id).substring(("000000"+sb_id).length()-7, ("000000"+sb_id).length());
+									out.print("<td>"+sb_id+"</td>");
+									out.print("<td>"+sb_name+"</td>");
+									out.print("<td>"+sb_type+"</td>");
+									out.print("<td class=\"center\">"+sb_college+"-"+sb_major+"</td>");
+									out.print("<td class=\"redstyle\"><a onclick=\"loadView('content/student_lesson_detail.jsp','student/lesson/detail',{sb_id:"+Integer.parseInt(sb_id)+"})\">查看详情</a></td>");
+									out.print("<td class=\"center\"><button onclick=\"loadView('content/student_lesson_choose.jsp','student/lesson/choose',{sb_id:"+Integer.parseInt(sb_id)+"})\">放弃选题</button></td></tr>");
+								%>
 						</tbody>
 					</table>
 				</div>
