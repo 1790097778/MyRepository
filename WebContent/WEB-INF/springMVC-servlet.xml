@@ -16,41 +16,39 @@
 
 
 	<!-- 自动扫描controller包中的控制器 -->
-	
+
 	<context:component-scan base-package="controller" />
 	<context:component-scan base-package="impl" />
 	<context:component-scan base-package="service" />
 	<!-- 使用默认的注解映射 -->
 	<mvc:annotation-driven />
 
-	<bean name="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-   <!-- 使用hibernate.cfg.xml配置文件 -->
-   <property name="configLocations">  
-       <value>classpath:hibernate.cfg.xml</value>  
-   </property> 
-   
-</bean>   
+	<bean name="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<!-- 使用hibernate.cfg.xml配置文件 -->
+		<property name="configLocations">
+			<value>classpath:hibernate.cfg.xml</value>
+		</property>
+
+	</bean>
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="suffix" value=".jsp" />
 
 	</bean>
 
-    <bean id="messageAdapter" class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">  
-       <property name="messageConverters">  
-           <list>  
-               <!-- Support JSON -->   
-               <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>  
-           </list>  
-       </property>  
-   </bean>  
-    <bean id="exceptionMessageAdapter" class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerExceptionResolver">  
-       <property name="messageConverters">  
-           <list>  
-               <!-- Support JSON -->   
-               <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>  
-           </list>  
-       </property>  
-   </bean>  
+	<bean id="messageAdapter"
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<!-- Support JSON -->
+				<bean
+					class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+					<property name="supportedMediaTypes" value="text/plain;charset=UTF-8" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
 
 </beans>

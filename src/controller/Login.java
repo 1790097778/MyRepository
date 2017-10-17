@@ -1,15 +1,10 @@
 package controller;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
-import org.hibernate.Criteria;
-import org.hibernate.Session;
-import org.hibernate.criterion.DetachedCriteria;
-import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import entity.DsPower;
+import dto.FBDTO;
 import entity.DsStudentinfo;
 import service.DsPowerService;
 import service.DsStudentinoService;
@@ -35,33 +30,23 @@ public class Login {
 	
 	@ResponseBody
 	@RequestMapping(method=RequestMethod.POST,value="loginIn")
-	public Map<String,String> loginIn(@RequestParam(required = true,value="name")String name
+	public FBDTO loginIn(@RequestParam(required = true,value="name")String name
 			,@RequestParam(required = true,value="password")String password,
 			Model model,HttpSession hSession)
 	{
-		
-		HashMap<String,String> result = new HashMap();
+		HashMap<String,String> data = new HashMap();
 		DsStudentinfo user =studentService.getByUsername(name);
 		if(user==null)
-		{
-			result.put("error", "name");
-			return result;
-		}
+			return new FBDTO(0,"name",null);
 		if(!user.getStPassword().equals(password))
-		{
-			result.put("error", "password");
-			return result;
-		}
+			return new FBDTO(0,"password",null);
 		else
-		{
-			
+		{	
 			//Save in session 
-			
 			hSession.setAttribute("user", user);
 			hSession.setAttribute("power", powerService.getById(user.getStPowerid()));
-			result.put("error","success");
-			System.out.println("success");
-			return result;
+			
+			return new FBDTO(null);
 		}
 	}
 
