@@ -57,7 +57,7 @@
 									out.print("<td class=\"center\">"+sb_college[i]+"-"+sb_major[i]+"</td>");
 									out.print("<td class=\"bluestyle\">"+"<a onclick=\"loadView('content/student_lesson_detail.jsp','student/lesson/detail',{id:"+Integer.parseInt(sb_id[i])+"})\">查看详情</a>"+"</td>");
 									out.print("<td class=");
-									if(sb_status[i].equals("1"))out.print("\"redstyle\">"+"可选"+"</td>");
+									if(sb_status[i].equals("0"))out.print("\"redstyle\">"+"可选"+"</td>");
 									else out.print("\"center\">"+"不可选"+"</td>");
 									out.print("</tr>");
 								}
