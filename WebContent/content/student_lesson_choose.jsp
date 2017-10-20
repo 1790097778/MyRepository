@@ -41,13 +41,13 @@
 						</thead>
 						<tbody>
 							<%
-								int data_number = Integer.parseInt(request.getParameter("data_number"));
 								String sb_id[]=request.getParameterValues("sb_id"),
 									   sb_name[]=request.getParameterValues("sb_name"),
 									   sb_type[]=request.getParameterValues("sb_type"),
 									   sb_college[]=request.getParameterValues("sb_college"),
 									   sb_major[]=request.getParameterValues("sb_major"),
 									   sb_status[]=request.getParameterValues("sb_status");
+								int data_number = sb_id.length;
 								for(int i=0;i<data_number;i++){
 									out.print("<tr class=\"gradeX\">");
 									sb_id[i]=("000000"+sb_id[i]).substring(("000000"+sb_id[i]).length()-7, ("000000"+sb_id[i]).length());
