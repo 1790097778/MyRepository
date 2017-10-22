@@ -3,25 +3,9 @@
 		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-    <session-factory>
-        <property name="hibernate.connection.driver_class">org.gjt.mm.mysql.Driver</property>
-        <property name="hibernate.connection.password">119554644</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost/design</property>
-        <property name="hibernate.connection.username">root</property>
+    <session-factory>      
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
-        
-        <mapping resource="entity/DsStudentinfo.hbm.xml"/>
-        <mapping resource="entity/DsPower.hbm.xml"/>
-        <mapping resource="entity/DsChat.hbm.xml"/>
-        <mapping resource="entity/DsClass.hbm.xml"/>
-        <mapping resource="entity/DsCollege.hbm.xml"/>
-        <mapping resource="entity/DsMajor.hbm.xml"/>
-        <mapping resource="entity/DsManagerinfo.hbm.xml"/>
-        <mapping resource="entity/DsNotice.hbm.xml"/>
-        <mapping resource="entity/DsPaper.hbm.xml"/>
-        <mapping resource="entity/DsReplyalloat.hbm.xml"/>
-        <mapping resource="entity/DsSubject.hbm.xml"/>
-        <mapping resource="entity/DsSupermanager.hbm.xml"/>
-        <mapping resource="entity/DsTask.hbm.xml"/>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
     </session-factory>
 </hibernate-configuration>

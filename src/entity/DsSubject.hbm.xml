@@ -6,26 +6,18 @@
             <column name="sb_id"/>
             <generator class="identity"/>
         </id>
-        <property generated="never" lazy="false" name="sbStudentid" optimistic-lock="true" type="int" unique="false">
-            <column name="sb_studentid" not-null="true">
-
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="sbTeacherid" optimistic-lock="true" type="int" unique="false">
-            <column name="sb_teacherid" not-null="true">
-    
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="sbCollegeid" optimistic-lock="true" type="int" unique="false">
-            <column name="sb_collegeid" not-null="true">
-         
-            </column>
-        </property>
-        <property generated="never" lazy="false" name="sbMajorid" optimistic-lock="true" type="int" unique="false">
-            <column name="sb_majorid" not-null="true">
-    
-            </column>
-        </property>
+        <many-to-one name="student" column="sb_studentid" 
+        not-null="true" class="entity.DsStudentinfo"/>
+        
+        <many-to-one name="teacher" column="sb_teacherid"
+        not-null="true" class="entity.DsManagerinfo"/>
+        
+       	<many-to-one name="college" column="sb_collegeid"
+       	not-null="true" class="entity.DsCollege"/>
+        
+        <many-to-one name="major" column="sb_majorid"
+        not-null="true" class="entity.DsMajor"/>
+        
         <property generated="never" lazy="false" name="sbTitle" optimistic-lock="true" type="string" unique="false">
             <column length="60" name="sb_title" not-null="true">
    

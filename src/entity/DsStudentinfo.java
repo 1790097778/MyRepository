@@ -1,4 +1,7 @@
 package entity;
+
+import java.util.Set;
+
 // Generated 2017-10-14 23:08:04 by Hibernate Tools 5.2.3.Final
 
 
@@ -10,116 +13,159 @@ public class DsStudentinfo  implements java.io.Serializable {
 
 
      private Integer stId;
-     private int stCollegeid;
-     private int stMajorid;
-     private int stClassid;
-     private int stTeacherid;
-     private int stPaperid;
-     private Integer stSubjectid;
-     private int stReplyid;
-     private int stPowerid;
+     private DsCollege college;
+     private DsMajor major;
+     private DsClass dsClass;
+     private DsManagerinfo teacher;
+     private DsPaper paper;
+     private DsSubject subject;
+     private DsReplyalloat reply;
+     private DsPower power;
      private String stStuname;
      private String stUsername;
      private String stPassword;
      private String stTelnumber;
      private String stEmail;
      private Float stScore;
+     private Set<DsTask> tasks;
 
     public DsStudentinfo() {
     }
 
 	
-    public DsStudentinfo(int stCollegeid, int stMajorid, int stClassid, int stTeacherid, int stPaperid, int stReplyid, int stPowerid, String stStuname, String stUsername, String stPassword) {
-        this.stCollegeid = stCollegeid;
-        this.stMajorid = stMajorid;
-        this.stClassid = stClassid;
-        this.stTeacherid = stTeacherid;
-        this.stPaperid = stPaperid;
-        this.stReplyid = stReplyid;
-        this.stPowerid = stPowerid;
-        this.stStuname = stStuname;
-        this.stUsername = stUsername;
-        this.stPassword = stPassword;
-    }
-    public DsStudentinfo(int stCollegeid, int stMajorid, int stClassid, int stTeacherid, int stPaperid, Integer stSubjectid, int stReplyid, int stPowerid, String stStuname, String stUsername, String stPassword, String stTelnumber, String stEmail, Float stScore) {
-       this.stCollegeid = stCollegeid;
-       this.stMajorid = stMajorid;
-       this.stClassid = stClassid;
-       this.stTeacherid = stTeacherid;
-       this.stPaperid = stPaperid;
-       this.stSubjectid = stSubjectid;
-       this.stReplyid = stReplyid;
-       this.stPowerid = stPowerid;
-       this.stStuname = stStuname;
-       this.stUsername = stUsername;
-       this.stPassword = stPassword;
-       this.stTelnumber = stTelnumber;
-       this.stEmail = stEmail;
-       this.stScore = stScore;
-    }
    
-    public Integer getStId() {
+   
+    public Set<DsTask> getTasks() {
+		return tasks;
+	}
+
+
+
+
+	public void setTasks(Set<DsTask> tasks) {
+		this.tasks = tasks;
+	}
+
+
+
+
+	public DsCollege getCollege() {
+		return college;
+	}
+
+
+
+	public void setCollege(DsCollege college) {
+		this.college = college;
+	}
+
+
+
+
+	public DsMajor getMajor() {
+		return major;
+	}
+
+
+
+
+	public void setMajor(DsMajor major) {
+		this.major = major;
+	}
+
+
+
+
+	public DsClass getDsClass() {
+		return dsClass;
+	}
+
+
+
+
+	public void setDsClass(DsClass dsClass) {
+		this.dsClass = dsClass;
+	}
+
+
+
+
+	public DsManagerinfo getTeacher() {
+		return teacher;
+	}
+
+
+
+
+	public void setTeacher(DsManagerinfo teacher) {
+		this.teacher = teacher;
+	}
+
+
+
+
+	public DsPaper getPaper() {
+		return paper;
+	}
+
+
+
+
+	public void setPaper(DsPaper paper) {
+		this.paper = paper;
+	}
+
+
+
+
+	public DsSubject getSubject() {
+		return subject;
+	}
+
+
+
+
+	public void setSubject(DsSubject subject) {
+		this.subject = subject;
+	}
+
+
+
+
+	public DsReplyalloat getReply() {
+		return reply;
+	}
+
+
+
+
+	public void setReply(DsReplyalloat reply) {
+		this.reply = reply;
+	}
+
+
+
+
+	public DsPower getPower() {
+		return power;
+	}
+
+
+
+
+	public void setPower(DsPower power) {
+		this.power = power;
+	}
+
+
+
+
+	public Integer getStId() {
         return this.stId;
     }
     
     public void setStId(Integer stId) {
         this.stId = stId;
-    }
-    public int getStCollegeid() {
-        return this.stCollegeid;
-    }
-    
-    public void setStCollegeid(int stCollegeid) {
-        this.stCollegeid = stCollegeid;
-    }
-    public int getStMajorid() {
-        return this.stMajorid;
-    }
-    
-    public void setStMajorid(int stMajorid) {
-        this.stMajorid = stMajorid;
-    }
-    public int getStClassid() {
-        return this.stClassid;
-    }
-    
-    public void setStClassid(int stClassid) {
-        this.stClassid = stClassid;
-    }
-    public int getStTeacherid() {
-        return this.stTeacherid;
-    }
-    
-    public void setStTeacherid(int stTeacherid) {
-        this.stTeacherid = stTeacherid;
-    }
-    public int getStPaperid() {
-        return this.stPaperid;
-    }
-    
-    public void setStPaperid(int stPaperid) {
-        this.stPaperid = stPaperid;
-    }
-    public Integer getStSubjectid() {
-        return this.stSubjectid;
-    }
-    
-    public void setStSubjectid(Integer stSubjectid) {
-        this.stSubjectid = stSubjectid;
-    }
-    public int getStReplyid() {
-        return this.stReplyid;
-    }
-    
-    public void setStReplyid(int stReplyid) {
-        this.stReplyid = stReplyid;
-    }
-    public int getStPowerid() {
-        return this.stPowerid;
-    }
-    
-    public void setStPowerid(int stPowerid) {
-        this.stPowerid = stPowerid;
     }
     public String getStStuname() {
         return this.stStuname;

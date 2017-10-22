@@ -10,10 +10,10 @@ public class DsSubject  implements java.io.Serializable {
 
 
      private Integer sbId;
-     private int sbStudentid;
-     private int sbTeacherid;
-     private int sbCollegeid;
-     private int sbMajorid;
+     private DsStudentinfo student;
+     private DsManagerinfo teacher;
+     private DsCollege college;
+     private DsMajor major;
      private String sbTitle;
      private String sbStatus;
      private String sbType;
@@ -24,27 +24,7 @@ public class DsSubject  implements java.io.Serializable {
     }
 
 	
-    public DsSubject(int sbStudentid, int sbTeacherid, int sbCollegeid, int sbMajorid, String sbTitle, String sbStatus, String sbType, String sbContent) {
-        this.sbStudentid = sbStudentid;
-        this.sbTeacherid = sbTeacherid;
-        this.sbCollegeid = sbCollegeid;
-        this.sbMajorid = sbMajorid;
-        this.sbTitle = sbTitle;
-        this.sbStatus = sbStatus;
-        this.sbType = sbType;
-        this.sbContent = sbContent;
-    }
-    public DsSubject(int sbStudentid, int sbTeacherid, int sbCollegeid, int sbMajorid, String sbTitle, String sbStatus, String sbType, String sbComments, String sbContent) {
-       this.sbStudentid = sbStudentid;
-       this.sbTeacherid = sbTeacherid;
-       this.sbCollegeid = sbCollegeid;
-       this.sbMajorid = sbMajorid;
-       this.sbTitle = sbTitle;
-       this.sbStatus = sbStatus;
-       this.sbType = sbType;
-       this.sbComments = sbComments;
-       this.sbContent = sbContent;
-    }
+   
    
     public Integer getSbId() {
         return this.sbId;
@@ -53,35 +33,61 @@ public class DsSubject  implements java.io.Serializable {
     public void setSbId(Integer sbId) {
         this.sbId = sbId;
     }
-    public int getSbStudentid() {
-        return this.sbStudentid;
-    }
     
-    public void setSbStudentid(int sbStudentid) {
-        this.sbStudentid = sbStudentid;
-    }
-    public int getSbTeacherid() {
-        return this.sbTeacherid;
-    }
-    
-    public void setSbTeacherid(int sbTeacherid) {
-        this.sbTeacherid = sbTeacherid;
-    }
-    public int getSbCollegeid() {
-        return this.sbCollegeid;
-    }
-    
-    public void setSbCollegeid(int sbCollegeid) {
-        this.sbCollegeid = sbCollegeid;
-    }
-    public int getSbMajorid() {
-        return this.sbMajorid;
-    }
-    
-    public void setSbMajorid(int sbMajorid) {
-        this.sbMajorid = sbMajorid;
-    }
-    public String getSbTitle() {
+    public DsStudentinfo getStudent() {
+		return student;
+	}
+
+
+	public void setStudent(DsStudentinfo student) {
+		this.student = student;
+	}
+
+
+	
+    public DsManagerinfo getTeacher() {
+		return teacher;
+	}
+
+
+
+
+	public void setTeacher(DsManagerinfo teacher) {
+		this.teacher = teacher;
+	}
+
+
+
+
+	public DsCollege getCollege() {
+		return college;
+	}
+
+
+
+
+	public void setCollege(DsCollege college) {
+		this.college = college;
+	}
+
+
+
+
+	public DsMajor getMajor() {
+		return major;
+	}
+
+
+
+
+	public void setMajor(DsMajor major) {
+		this.major = major;
+	}
+
+
+
+
+	public String getSbTitle() {
         return this.sbTitle;
     }
     

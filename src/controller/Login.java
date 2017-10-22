@@ -1,10 +1,13 @@
 package controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import org.hibernate.criterion.Criterion;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,18 +18,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import dto.FBDTO;
 import entity.DsStudentinfo;
-import service.DsPowerService;
-import service.DsStudentinoService;
+import service.BasicService;
+
 
 
 @Controller
 @RequestMapping("login")
 public class Login {
 	@Autowired
-	private DsStudentinoService studentService;
+	private BasicService studentService;
 	
-	@Autowired
-	private DsPowerService powerService;
 	
 	@ResponseBody
 	@RequestMapping(method=RequestMethod.POST,value="loginIn")
@@ -34,19 +35,24 @@ public class Login {
 			,@RequestParam(required = true,value="password")String password,
 			Model model,HttpSession hSession)
 	{
-		HashMap<String,String> data = new HashMap();
-		DsStudentinfo user =studentService.getByUsername(name);
-		if(user==null)
+		
+		ArrayList<Criterion> criterions = new ArrayList<>();
+		criterions.add(Restrictions.eq("stUsername", name));
+		List list = studentService.get(criterions, DsStudentinfo.class);
+		if(list.size()==0)
 			return new FBDTO(0,"name",null);
+		DsStudentinfo user = (DsStudentinfo) list.get(0);
+		System.out.println(user.getStPassword());
 		if(!user.getStPassword().equals(password))
 			return new FBDTO(0,"password",null);
 		else
 		{	
 			//Save in session 
 			hSession.setAttribute("user", user);
-			hSession.setAttribute("power", powerService.getById(user.getStPowerid()));
-			
-			return new FBDTO(null);
+			hSession.setAttribute("power", user.getPower());
+			HashMap<String, DsStudentinfo> map = new HashMap<String,DsStudentinfo>();
+			map.put("user", user);
+			return new FBDTO(1,"success",map);
 		}
 	}
 

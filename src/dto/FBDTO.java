@@ -24,6 +24,10 @@ public class FBDTO {
 		this.data = data;
 	}
 
+	public FBDTO() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getSuccess() {
 		return success;
 	}

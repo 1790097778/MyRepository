@@ -6,138 +6,79 @@
 <!-- Generated 2017-10-14 23:08:04 by Hibernate Tools 5.2.3.Final -->
 <hibernate-mapping>
 
-<class
-    name="entity.DsStudentinfo"
-    table="ds_studentinfo"
-    catalog="design"
-    optimistic-lock="version"
->
+	<class name="entity.DsStudentinfo" table="ds_studentinfo"
+		catalog="design" optimistic-lock="version" lazy="true">
 
-	<id 
-        name="stId"
-        type="java.lang.Integer"
-    >
-    
-<column name="st_id" />
-	    <generator class="identity" />
-    </id>
+		<id name="stId" type="java.lang.Integer">
 
+			<column name="st_id" />
+			<generator class="identity" />
+		</id>
+		<set name="tasks" >
+			<key column="tk_studentid"/>
+			<one-to-many class="entity.DsTask"/>
+		</set>
 
+		<many-to-one name="college" column="st_collegeid" lazy="proxy"
+			not-null="true" class="entity.DsCollege" />
 
+		<many-to-one name="major" column="st_majorid" not-null="true"
+			class="entity.DsMajor" />
 
-    <property
-        name="stCollegeid"
-	    type="int"
-    >
-<column name="st_collegeid" not-null="true" >
+		<many-to-one name="dsClass" column="st_classid" not-null="true"
+			class="entity.DsClass" />
 
-</column>  </property>
+		<many-to-one name="teacher" column="st_teachid" not-null="true"
+			class="entity.DsManagerinfo" />
 
-    <property
-        name="stMajorid"
-	    type="int"
-    >
-<column name="st_majorid" not-null="true" >
+		<many-to-one name="paper" column="st_paperid" class="entity.DsPaper" />
 
-</column>  </property>
+		<many-to-one name="subject" column="st_subjectid" cascade="save-update"
+			class="entity.DsSubject" />
 
-    <property
-        name="stClassid"
-	    type="int"
-    >
-<column name="st_classid" not-null="true" >
+		<many-to-one name="reply" column="st_replyid" not-null="true"
+			class="entity.DsReplyalloat" />
 
-</column>  </property>
+		<many-to-one name="power" column="st_powerid" not-null="true"
+			class="entity.DsPower" />
 
-    <property
-        name="stTeacherid"
-	    type="int"
-    >
-<column name="st_teacherid" not-null="true" >
+		<property name="stStuname" type="string">
+			<column name="st_stuname" length="30" not-null="true">
 
-</column>  </property>
+			</column>
+		</property>
 
-    <property
-        name="stPaperid"
-	    type="int"
-    >
-<column name="st_paperid" not-null="true" >
+		<property name="stUsername" type="string">
+			<column name="st_username" length="11" not-null="true">
 
-</column>  </property>
+			</column>
+		</property>
 
-    <property
-        name="stSubjectid"
-	    type="java.lang.Integer"
-    >
-<column name="st_subjectid" >
+		<property name="stPassword" type="string">
+			<column name="st_password" length="11" not-null="true">
 
-</column>  </property>
+			</column>
+		</property>
 
-    <property
-        name="stReplyid"
-	    type="int"
-    >
-<column name="st_replyid" not-null="true" >
+		<property name="stTelnumber" type="string">
+			<column name="st_telnumber" length="11">
 
-</column>  </property>
+			</column>
+		</property>
 
-    <property
-        name="stPowerid"
-	    type="int"
-    >
-<column name="st_powerid" not-null="true" >
+		<property name="stEmail" type="string">
+			<column name="st_email" length="20">
 
-</column>  </property>
+			</column>
+		</property>
 
-    <property
-        name="stStuname"
-	    type="string"
-    >
-<column name="st_stuname" length="30" not-null="true" >
+		<property name="stScore" type="java.lang.Float">
+			<column name="st_score" precision="3" scale="1">
 
-</column>  </property>
-
-    <property
-        name="stUsername"
-	    type="string"
-    >
-<column name="st_username" length="11" not-null="true" >
-
-</column>  </property>
-
-    <property
-        name="stPassword"
-	    type="string"
-    >
-<column name="st_password" length="11" not-null="true" >
-
-</column>  </property>
-
-    <property
-        name="stTelnumber"
-	    type="string"
-    >
-<column name="st_telnumber" length="11" >
-
-</column>  </property>
-
-    <property
-        name="stEmail"
-	    type="string"
-    >
-<column name="st_email" length="20" >
-
-</column>  </property>
-
-    <property
-        name="stScore"
-	    type="java.lang.Float"
-    >
-<column name="st_score" precision="3" scale="1" >
-
-</column>  </property>
+			</column>
+		</property>
 
 
-</class>
+	</class>
 
 </hibernate-mapping>
