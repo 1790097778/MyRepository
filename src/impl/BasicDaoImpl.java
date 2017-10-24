@@ -17,7 +17,6 @@ import dao.DataDao;
 public class BasicDaoImpl implements DataDao {
 	@Autowired
 	private SessionFactory sessionFactory;
-	@Override
 	public Session getSession() {
 		// TODO Auto-generated method stub
 		return sessionFactory.openSession();
@@ -59,6 +58,18 @@ public class BasicDaoImpl implements DataDao {
 	public void updata(Object data) {
 		// TODO Auto-generated method stub
 		getSession().saveOrUpdate(data);
+	}
+
+	@Override
+	public Transaction begin() {
+		// TODO Auto-generated method stub
+		return  getSession().beginTransaction();
+	}
+
+	@Override
+	public void close() {
+		// TODO Auto-generated method stub
+		getSession().close();
 	}
 
 	

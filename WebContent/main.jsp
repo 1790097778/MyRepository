@@ -119,7 +119,7 @@
 	function back(){
 		
 	}
-	function loadView(page_name,mothod_name,send_data){
+	function loadView(page_name,method_name,send_data){
 	    $.ajax({
 	    	global:false,
 	    	async:true,

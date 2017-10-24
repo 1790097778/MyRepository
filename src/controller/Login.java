@@ -30,7 +30,7 @@ public class Login {
 	
 	
 	@ResponseBody
-	@RequestMapping(method=RequestMethod.POST,value="loginIn")
+	@RequestMapping(method=RequestMethod.POST,value="loginIn.do")
 	public FBDTO loginIn(@RequestParam(required = true,value="name")String name
 			,@RequestParam(required = true,value="password")String password,
 			Model model,HttpSession hSession)
@@ -47,12 +47,11 @@ public class Login {
 			return new FBDTO(0,"password",null);
 		else
 		{	
-			//Save in session 
+//			Save in session 
 			hSession.setAttribute("user", user);
 			hSession.setAttribute("power", user.getPower());
-			HashMap<String, DsStudentinfo> map = new HashMap<String,DsStudentinfo>();
-			map.put("user", user);
-			return new FBDTO(1,"success",map);
+			studentService.getSession().close();
+			return new FBDTO(null);
 		}
 	}
 

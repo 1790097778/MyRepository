@@ -3,6 +3,7 @@ package service;
 import java.util.List;
 
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Criterion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,11 @@ import dao.DataDao;
 public class BasicService {
 	@Autowired
 	private DataDao dao;
+	public Transaction begin()
+	{
+		return dao.begin();
+	}
+	
 	public Session getSession()
 	{
 		return dao.getSession();

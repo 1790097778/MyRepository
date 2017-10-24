@@ -1,3 +1,4 @@
+<%@page import="entity.DsSubject"%>
 <%@page pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -41,6 +42,7 @@
 						</thead>
 						<tbody>
 							<%
+								
 								String sb_id[]=request.getParameterValues("sb_id"),
 									   sb_name[]=request.getParameterValues("sb_name"),
 									   sb_type[]=request.getParameterValues("sb_type"),

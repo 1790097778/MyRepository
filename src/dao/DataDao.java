@@ -7,7 +7,7 @@ import org.hibernate.Transaction;
 import org.hibernate.criterion.Criterion;
 
 public interface DataDao {
-	public Session getSession();
+	public Transaction begin();
 	
 	public void addData(Object data);
 	
@@ -17,5 +17,7 @@ public interface DataDao {
 	
 	public void updata(Object data);
 	
+	public void close();
 	
+	public Session getSession();
 }
