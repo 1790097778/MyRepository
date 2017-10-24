@@ -27,10 +27,20 @@
 				<div class="table-responsive">
 					<!-- 此处填充内容 -->
 					<div class="inner">
-		                <div style="padding-bottom: 10px;">主席：张导师</div>
-		                <div style="padding-bottom: 10px;">导师：李导师、王导师...</div>
-		                <div style="padding-bottom: 10px;">时间：2017/10/24</div>                                                       <!--时间地点-->
-		                <div style="padding-bottom: 10px;">地点：3-001</div>
+						<%
+							String teacher[] = request.getParameterValues("ra_teacher"),
+								   student[] = request.getParameterValues("ra_student"),
+								   time = request.getParameter("ra_time"),
+								   place = request.getParameter("ra_place"),teachers="",students="";
+							for(int i=0;i<teacher.length;i++)teachers=teachers+teacher[i]+"，";
+							teachers = teachers.substring(0, teachers.length());
+							for(int i=0;i<student.length;i++)students=students+student[i]+"，";
+							students = students.substring(0, students.length());
+							out.print("<div style=\"padding-bottom: 10px;\">"+students+"</div>");
+							out.print("<div style=\"padding-bottom: 10px;\">"+teachers+"</div>");
+							out.print("<div style=\"padding-bottom: 10px;\">时间："+time+"</div> ");
+							out.print("<div style=\"padding-bottom: 10px;\">地点："+place+"</div>");
+						%>
 		            </div>
 				</div>
 			</div>

@@ -31,24 +31,33 @@
 							<tr>
 								<th>课题编号</th>
 								<th>课程名称</th>
-								<th>课程类型(s)</th>
+								<th>课程类型</th>
 								<th>院系</th>
+								<th>详情</th>
 								<th>状态</th>
 							</tr>
 						</thead>
 						<tbody>
 							<%
-								while(true){
+								String id[]=request.getParameterValues("sb_id"),
+									   name[]=request.getParameterValues("sb_name"),
+									   type[]=request.getParameterValues("sb_type"),
+									   college[]=request.getParameterValues("sb_college"),
+									   major[]=request.getParameterValues("sb_major"),
+									   content[]=request.getParameterValues("sb_content"),
+									   status[]=request.getParameterValues("sb_status");
+								for(int i=0;i<name.length;i++){
+									id[i]=("000000"+id[i]).substring(("000000"+id[i]).length()-7, ("000000"+id[i]).length());
 									out.print("<tr class=\"gradeX\">");
-									out.print("<td><div class=\"radio\"> <label> <input type=\"radio\" name=\"optionsRadios"+"\" id=\"optionsRadios"+"\" value=\"option\" >"+request.getParameter("name")+"</label> </div></td>");
-									out.print("<td>"+"无"+"</td>");
-									out.print("<td>"+"无"+"</td>");
-									out.print("<td class=\"center\">"+"无"+"</td>");
+									out.print("<td><div class=\"radio\"> <label> <input type=\"radio\" name=\"optionsRadios"+"\" id=\"optionsRadios"+i+"\" value=\"option\" >"+id[i]+"</label> </div></td>");
+									out.print("<td>"+name[i]+"</td>");
+									out.print("<td>"+type[i]+"</td>");
+									out.print("<td class=\"center\">"+college[i]+"-"+major[i]+"</td>");
+									out.print("<td class=\"bluestyle\">"+"<a onclick=\"loadView('content/student_lesson_detail.jsp','student/lesson/detail',{id:"+Integer.parseInt(id[i])+"})\">查看详情</a>"+"</td>");
 									out.print("<td class=");
-									if(true)out.print("\"redstyle\">"+"未通过"+"</td>");
+									if(status[i].equals("0"))out.print("\"redstyle\">"+"未通过"+"</td>");
 									else out.print("\"center\">"+"已通过"+"</td>");
 									out.print("</tr>");
-									break;
 								}
 							%>
 							<tr class="gradeX">

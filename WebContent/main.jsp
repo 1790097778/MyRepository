@@ -133,7 +133,11 @@
 	    	},
 	    	success:function(data){
 	    		$("#page-inner").empty();
-	    		$("#page-inner").load(page_name,data,null);
+	    		if(data.success==1){
+	    			$("#page-inner").load(page_name,data.data,null);
+	    		}else{
+	    			location.href ="content/msg_error.jsp?error="+data.errorMsg;
+	    		}
 	    	},
 	    	error: function(XMLHttpRequest, textStatus, errorThrown) {
 	    		 var errorMsg="error in $.ajax()"+
