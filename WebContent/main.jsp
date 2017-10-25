@@ -24,6 +24,8 @@
 		String power=null;
 		try{
 			power=session.getAttribute("power").toString();
+			out.print(power);
+			out.print(power.toCharArray());
 		}catch(Exception e){
 			%><script type="text/javascript">location.href ="login.jsp?error=unlogin";</script><%
 		}
@@ -31,6 +33,7 @@
 		if(power==null||power.equals("")){
 			%><script type="text/javascript">location.href ="login.jsp?error=unlogin";</script><%
 		}else{
+			out.print(power.toCharArray());
 			char[] tmpPower = power.toCharArray();
 			for(int i=0;i<3;i++){
 				if(tmpPower[i]=='0')top[i]=false;
@@ -126,7 +129,7 @@
 	    	type: "post",
 	    	dataType:"json",
 	    	data:send_data,
-	    	url:mothod_name,
+	    	url:method_name,
 	    	beforeSend:function(){
 	    		$("#page-inner").empty();
 	    		$("#page-inner").load("content/msg_loading.jsp");
@@ -134,7 +137,7 @@
 	    	success:function(data){
 	    		$("#page-inner").empty();
 	    		if(data.success==1){
-	    			$("#page-inner").load(page_name,data.data,null);
+	    			$("#page-inner").load("content/student_lesson_choose.jsp",data.data,null);
 	    		}else{
 	    			location.href ="content/msg_error.jsp?error="+data.errorMsg;
 	    		}

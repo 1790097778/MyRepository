@@ -42,13 +42,14 @@
 						</thead>
 						<tbody>
 							<%
+							
 								
-								String sb_id[]=request.getParameterValues("sb_id"),
-									   sb_name[]=request.getParameterValues("sb_name"),
-									   sb_type[]=request.getParameterValues("sb_type"),
-									   sb_college[]=request.getParameterValues("sb_college"),
-									   sb_major[]=request.getParameterValues("sb_major"),
-									   sb_status[]=request.getParameterValues("sb_status");
+								String sb_id[]=request.getParameterValues("sb_id[]"),
+									   sb_name[]=request.getParameterValues("sb_name[]"),
+									   sb_type[]=request.getParameterValues("sb_type[]"),
+									   sb_college[]=request.getParameterValues("sb_college[]"),
+									   sb_major[]=request.getParameterValues("sb_major[]"),
+									   sb_status[]=request.getParameterValues("sb_status[]");
 								int data_number = sb_id.length;
 								for(int i=0;i<data_number;i++){
 									out.print("<tr class=\"gradeX\">");
@@ -62,6 +63,7 @@
 									if(sb_status[i].equals("0"))out.print("\"redstyle\">"+"可选"+"</td>");
 									else out.print("\"center\">"+"不可选"+"</td>");
 									out.print("</tr>");
+									
 								}
 							%>
 						</tbody>
@@ -70,11 +72,11 @@
 					<div style="text-align: center;margin-top: -25px;">
 						<div style="margin: auto;">
 							<%
-								int page_number=Integer.parseInt(request.getParameter("page_number")),
-								    page_maxnumber=Integer.parseInt(request.getParameter("page_maxnumber"));
-								if(page_number>1)out.print("<button style=\"padding-right: 10px;\" onclick=\"loadView('content/student_lesson_choose.jsp','student/lesson/choose',{page_number:"+(page_number-1)+"})\">上一页</button>");
+								int page_number=Integer.parseInt(request.getParameter("current_pageNumber")),
+								    page_maxnumber=Integer.parseInt(request.getParameter("max_pageNumber"));
+								if(page_number>1)out.print("<button style=\"padding-right: 10px;\" onclick=\"loadView('content/student_lesson_choose.jsp','student/lesson/flip.do',{current_pageNumber:"+(page_number-1)+"})\">上一页</button>");
 								out.print(page_number+"/"+page_maxnumber);
-								if(page_number<page_maxnumber)out.print("<button style=\"padding-right: 10px;\" onclick=\"loadView('content/student_lesson_choose.jsp','student/lesson/choose',{page_number:"+(page_number+1)+"})\">下一页</button>");
+								if(page_number<page_maxnumber)out.print("<button style=\"padding-right: 10px;\" onclick=\"loadView('content/student_lesson_choose.jsp','student/lesson/flip.do',{current_pageNumber:"+(page_number+1)+"})\">下一页</button>");
 							%>
 						</div>
 					</div>
@@ -89,7 +91,7 @@ function cheak(){
 	var radio = document.getElementById("radios0");
 	for(var i=1;radio!=null;i++){
 		if(radio.checked)
-			loadView('content/student_lesson.jsp','student/lesson',{sb_id:radio.value});
+			loadView('content/student_lesson.jsp','student/lesson/addSubject.do',{sb_id:radio.value});
 		radio = document.getElementById("radios"+i);
 	}
 	alert("亲，当前没有选中任何课程哟~");

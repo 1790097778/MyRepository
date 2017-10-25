@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,21 +36,22 @@ public class Login {
 			,@RequestParam(required = true,value="password")String password,
 			Model model,HttpSession hSession)
 	{
-		
+		Transaction tran = studentService.begin();
 		ArrayList<Criterion> criterions = new ArrayList<>();
 		criterions.add(Restrictions.eq("stUsername", name));
 		List list = studentService.get(criterions, DsStudentinfo.class);
 		if(list.size()==0)
 			return new FBDTO(0,"name",null);
 		DsStudentinfo user = (DsStudentinfo) list.get(0);
-		System.out.println(user.getStPassword());
+		
 		if(!user.getStPassword().equals(password))
 			return new FBDTO(0,"password",null);
 		else
 		{	
 //			Save in session 
-			hSession.setAttribute("user", user);
+			hSession.setAttribute("user_id", user.getStId());
 			hSession.setAttribute("power", user.getPower());
+			tran.commit();
 			studentService.getSession().close();
 			return new FBDTO(null);
 		}
