@@ -90,6 +90,7 @@ public class StudentSubjectManagerImpl implements StudentSubjectManager {
 	@SuppressWarnings("unchecked")
 	private void refitSingleSubject(Map map ,DsSubject subject,boolean detail)
 	{
+		
 		map.put("sb_name", subject.getSbTitle());
 		map.put("sb_type", subject.getSbType());
 		map.put("sb_college", collgeDao.geById(subject.getSbCollegeid()).getClName());
@@ -97,6 +98,7 @@ public class StudentSubjectManagerImpl implements StudentSubjectManager {
 		
 		if(detail)
 		{
+			map.put("sb_id", subject.getSbId());
 			map.put("sb_content", subject.getSbContent());
 			map.put("sb_comments", subject.getSbComments());
 		}else

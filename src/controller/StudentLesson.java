@@ -96,7 +96,6 @@ public class StudentLesson {
 		if(!sessionExist(session))
 			return new Dto(0,"Identity expired",null);
 		try{
-			System.out.println(sbId);
 			manager.addSubject((int)session.getAttribute("studentId"), sbId);
 			return manager.getMySubject((int)session.getAttribute("studentId"));
 		}catch(Exception e)

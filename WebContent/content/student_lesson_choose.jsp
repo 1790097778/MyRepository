@@ -102,16 +102,14 @@
 	<script type="text/javascript">
 function cheak(){
 	var radio = document.getElementById("radios0");
-	boolean cheak =false;
 	for(var i=1;radio!=null;i++){
 		if(radio.checked)
 			{
+				
 				loadView('content/student_lesson.jsp','student/lesson/addSubject.do',{sb_id:radio.value});
-				cheak = true;
 			}
 				radio = document.getElementById("radios"+i);
 	}
-	if(!cheak)
 		alert("亲，当前没有选中任何课程哟~");
 }
 </script>
