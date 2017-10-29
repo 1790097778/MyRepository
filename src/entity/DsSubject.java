@@ -24,27 +24,7 @@ public class DsSubject  implements java.io.Serializable {
     }
 
 	
-    public DsSubject(int sbStudentid, int sbTeacherid, int sbCollegeid, int sbMajorid, String sbTitle, String sbStatus, String sbType, String sbContent) {
-        this.sbStudentid = sbStudentid;
-        this.sbTeacherid = sbTeacherid;
-        this.sbCollegeid = sbCollegeid;
-        this.sbMajorid = sbMajorid;
-        this.sbTitle = sbTitle;
-        this.sbStatus = sbStatus;
-        this.sbType = sbType;
-        this.sbContent = sbContent;
-    }
-    public DsSubject(int sbStudentid, int sbTeacherid, int sbCollegeid, int sbMajorid, String sbTitle, String sbStatus, String sbType, String sbComments, String sbContent) {
-       this.sbStudentid = sbStudentid;
-       this.sbTeacherid = sbTeacherid;
-       this.sbCollegeid = sbCollegeid;
-       this.sbMajorid = sbMajorid;
-       this.sbTitle = sbTitle;
-       this.sbStatus = sbStatus;
-       this.sbType = sbType;
-       this.sbComments = sbComments;
-       this.sbContent = sbContent;
-    }
+   
    
     public Integer getSbId() {
         return this.sbId;
@@ -53,6 +33,7 @@ public class DsSubject  implements java.io.Serializable {
     public void setSbId(Integer sbId) {
         this.sbId = sbId;
     }
+
     public Integer getSbStudentid() {
         return this.sbStudentid;
     }
@@ -82,8 +63,8 @@ public class DsSubject  implements java.io.Serializable {
         this.sbMajorid = sbMajorid;
     }
     public String getSbTitle() {
-        return this.sbTitle;
-    }
+    	return sbTitle;
+	}
     
     public void setSbTitle(String sbTitle) {
         this.sbTitle = sbTitle;
