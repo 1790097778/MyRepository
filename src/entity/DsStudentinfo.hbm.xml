@@ -9,13 +9,18 @@
 	<class name="entity.DsStudentinfo" table="ds_studentinfo"
 		catalog="design" optimistic-lock="version" lazy="false">
 
+
 		<id name="stId" type="java.lang.Integer">
 
 			<column name="st_id" />
 			<generator class="identity" />
 		</id>
 
+		<many-to-one name="college" column="st_collegeid" lazy="proxy"
+			not-null="true" class="entity.DsCollege" />
 
+		<many-to-one name="major" column="st_majorid" not-null="true"
+			class="entity.DsMajor" />
 
 
 		<property name="stCollegeid" type="java.lang.Integer">

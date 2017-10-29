@@ -1,3 +1,5 @@
+<%@page import="org.apache.catalina.connector.Request"%>
+<%@page import="controller.StudentLesson"%>
 <%@page pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -41,6 +43,8 @@
 						<tbody>
 							<tr class="gradeX">
 								<%
+						
+								
 									String sb_id=request.getParameter("sb_id"),
 									   sb_name=request.getParameter("sb_name"),
 									   sb_type=request.getParameter("sb_type"),
@@ -54,6 +58,7 @@
 									out.print("<td class=\"center\">"+sb_college+"-"+sb_major+"</td>");
 									out.print("<td class=\"redstyle\"><a onclick=\"loadView('content/student_lesson_detail.jsp','student/lesson/detail.do',{sb_id:"+Integer.parseInt(sb_id)+"})\">查看详情</a></td>");
 									out.print("<td class=\"center\"><button onclick=\"loadView('content/student_lesson_choose.jsp','student/lesson/abandon.do',{sb_id:"+Integer.parseInt(sb_id)+"})\">放弃选题</button></td></tr>");
+
 								%>
 						</tbody>
 					</table>

@@ -24,6 +24,8 @@
 		String power=null;
 		try{
 			power=session.getAttribute("power").toString();
+			out.print(power);
+			out.print(power.toCharArray());
 		}catch(Exception e){
 			%><script type="text/javascript">location.href ="login.jsp?error=unlogin";</script><%
 		}
@@ -31,6 +33,7 @@
 		if(power==null||power.equals("")){
 			%><script type="text/javascript">location.href ="login.jsp?error=unlogin";</script><%
 		}else{
+			out.print(power.toCharArray());
 			char[] tmpPower = power.toCharArray();
 			for(int i=0;i<3;i++){
 				if(tmpPower[i]=='0')top[i]=false;

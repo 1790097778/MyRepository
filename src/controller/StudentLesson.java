@@ -1,5 +1,6 @@
 package controller;
 
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 
 import dto.Dto;
 import service.StudentSubjectManager;
@@ -32,10 +34,12 @@ public class StudentLesson {
 			e.printStackTrace();
 			return new Dto(0, "Fail to get Subject", null);
 		}	
+
 	}
 	
 	@RequestMapping("abandon.do")
 	@ResponseBody
+
 	public Dto abandon(HttpSession session)
 	{
 		if(!sessionExist(session))
@@ -87,10 +91,12 @@ public class StudentLesson {
 			// TODO: handle exception
 			return new Dto(0,"Fail to flip",null);
 		}
+
 	}
 	
 	@RequestMapping("addSubject.do")
 	@ResponseBody
+
 	public Dto addSubject(@RequestParam(value="sb_id")int sbId,HttpSession session)
 	{
 		if(!sessionExist(session))
