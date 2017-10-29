@@ -1,4 +1,7 @@
 package entity;
+
+import java.util.Date;
+
 // Generated 2017-10-14 23:08:04 by Hibernate Tools 5.2.3.Final
 
 
@@ -10,18 +13,18 @@ public class DsChat  implements java.io.Serializable {
 
 
      private int chId;
-     private int chPublisherid;
-     private int chReceiver;
-     private int chCollegeid;
-     private int chMajorid;
-     private int chClassid;
-     private String chTime;
+     private Integer chPublisherid;
+     private Integer chReceiver;
+     private Integer chCollegeid;
+     private Integer chMajorid;
+     private Integer chClassid;
+     private long chTime;
      private String chContent;
 
     public DsChat() {
     }
 
-    public DsChat(int chId, int chPublisherid, int chReceiver, int chCollegeid, int chMajorid, int chClassid, String chTime, String chContent) {
+    public DsChat(int chId, int chPublisherid, int chReceiver, int chCollegeid, int chMajorid, int chClassid, long chTime, String chContent) {
        this.chId = chId;
        this.chPublisherid = chPublisherid;
        this.chReceiver = chReceiver;
@@ -39,18 +42,18 @@ public class DsChat  implements java.io.Serializable {
     public void setChId(int chId) {
         this.chId = chId;
     }
-    public int getChPublisherid() {
+    public Integer getChPublisherid() {
         return this.chPublisherid;
     }
     
-    public void setChPublisherid(int chPublisherid) {
+    public void setChPublisherid(Integer chPublisherid) {
         this.chPublisherid = chPublisherid;
     }
-    public int getChReceiver() {
+    public Integer getChReceiver() {
         return this.chReceiver;
     }
     
-    public void setChReceiver(int chReceiver) {
+    public void setChReceiver(Integer chReceiver) {
         this.chReceiver = chReceiver;
     }
     public int getChCollegeid() {
@@ -74,14 +77,16 @@ public class DsChat  implements java.io.Serializable {
     public void setChClassid(int chClassid) {
         this.chClassid = chClassid;
     }
-    public String getChTime() {
-        return this.chTime;
-    }
     
-    public void setChTime(String chTime) {
-        this.chTime = chTime;
-    }
-    public String getChContent() {
+    public long getChTime() {
+		return chTime;
+	}
+
+	public void setChTime(long chTime) {
+		this.chTime = chTime;
+	}
+
+	public String getChContent() {
         return this.chContent;
     }
     

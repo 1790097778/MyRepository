@@ -27,7 +27,7 @@
 
     <property
         name="ntPublisherid"
-	    type="int"
+	    type="java.lang.Integer"
     >
 <column name="nt_publisherid" not-null="true" >
 
@@ -35,7 +35,7 @@
 
     <property
         name="ntCollegeid"
-	    type="int"
+	    type="java.lang.Integer"
     >
 <column name="nt_collegeid" not-null="true" >
 
@@ -43,7 +43,7 @@
 
     <property
         name="ntTime"
-	    type="string"
+	    type="long"
     >
 <column name="nt_time" length="8" not-null="true" >
 

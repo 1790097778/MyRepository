@@ -7,7 +7,7 @@
 <hibernate-mapping>
 
 	<class name="entity.DsPower" table="ds_power" catalog="design"
-		optimistic-lock="version">
+		optimistic-lock="version" lazy="false">
 
 		<id name="pwId" type="java.lang.Integer">
 

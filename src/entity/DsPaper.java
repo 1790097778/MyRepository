@@ -10,13 +10,13 @@ public class DsPaper  implements java.io.Serializable {
 
 
      private Integer ppId;
-     private int ppStudentid;
-     private int ppCollegeid;
-     private int ppMajorid;
-     private int ppClassid;
-     private int ppTeacherid;
-     private int ppJudgerid;
-     private int ppReplyid;
+     private Integer ppStudentid;
+     private Integer ppCollegeid;
+     private Integer ppMajorid;
+     private Integer ppClassid;
+     private Integer ppTeacherid;
+     private Integer ppJudgerid;
+     private Integer ppReplyid;
      private String ppTeacheradvice;
      private String ppContent;
      private String ppState;

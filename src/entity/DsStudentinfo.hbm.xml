@@ -4,140 +4,107 @@
 	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <!-- Generated 2017-10-14 23:08:04 by Hibernate Tools 5.2.3.Final -->
-<hibernate-mapping>
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="false">
 
-<class
-    name="entity.DsStudentinfo"
-    table="ds_studentinfo"
-    catalog="design"
-    optimistic-lock="version"
->
+	<class name="entity.DsStudentinfo" table="ds_studentinfo"
+		catalog="design" optimistic-lock="version" lazy="false">
 
-	<id 
-        name="stId"
-        type="java.lang.Integer"
-    >
-    
-<column name="st_id" />
-	    <generator class="identity" />
-    </id>
+		<id name="stId" type="java.lang.Integer">
+
+			<column name="st_id" />
+			<generator class="identity" />
+		</id>
 
 
 
 
-    <property
-        name="stCollegeid"
-	    type="int"
-    >
-<column name="st_collegeid" not-null="true" >
+		<property name="stCollegeid" type="java.lang.Integer">
+			<column name="st_collegeid" not-null="true">
 
-</column>  </property>
+			</column>
+		</property>
 
-    <property
-        name="stMajorid"
-	    type="int"
-    >
-<column name="st_majorid" not-null="true" >
+		<property name="stMajorid" type="java.lang.Integer">
+			<column name="st_majorid" not-null="true">
 
-</column>  </property>
+			</column>
+		</property>
 
-    <property
-        name="stClassid"
-	    type="int"
-    >
-<column name="st_classid" not-null="true" >
+		<property name="stClassid" type="java.lang.Integer">
+			<column name="st_classid" not-null="true">
 
-</column>  </property>
+			</column>
+		</property>
 
-    <property
-        name="stTeacherid"
-	    type="int"
-    >
-<column name="st_teacherid" not-null="true" >
+		<property name="stTeacherid" type="java.lang.Integer">
+			<column name="st_teacherid" not-null="true">
 
-</column>  </property>
+			</column>
+		</property>
 
-    <property
-        name="stPaperid"
-	    type="int"
-    >
-<column name="st_paperid" not-null="true" >
+		<property name="stPaperid" type="java.lang.Integer">
+			<column name="st_paperid" not-null="true">
 
-</column>  </property>
+			</column>
+		</property>
 
-    <property
-        name="stSubjectid"
-	    type="java.lang.Integer"
-    >
-<column name="st_subjectid" >
+		<property name="stSubjectid" type="java.lang.Integer">
+			<column name="st_subjectid">
 
-</column>  </property>
+			</column>
+		</property>
 
-    <property
-        name="stReplyid"
-	    type="int"
-    >
-<column name="st_replyid" not-null="true" >
+		<property name="stReplyid" type="java.lang.Integer">
+			<column name="st_replyid" not-null="true">
 
-</column>  </property>
+			</column>
+		</property>
 
-    <property
-        name="stPowerid"
-	    type="int"
-    >
-<column name="st_powerid" not-null="true" >
+		<property name="stPowerid" type="int">
+			<column name="st_powerid" not-null="true">
 
-</column>  </property>
+			</column>
+		</property>
 
-    <property
-        name="stStuname"
-	    type="string"
-    >
-<column name="st_stuname" length="30" not-null="true" >
+		<property name="stStuname" type="string">
+			<column name="st_stuname" length="30" not-null="true">
 
-</column>  </property>
+			</column>
+		</property>
 
-    <property
-        name="stUsername"
-	    type="string"
-    >
-<column name="st_username" length="11" not-null="true" >
+		<property name="stUsername" type="string">
+			<column name="st_username" length="11" not-null="true">
 
-</column>  </property>
+			</column>
+		</property>
 
-    <property
-        name="stPassword"
-	    type="string"
-    >
-<column name="st_password" length="11" not-null="true" >
+		<property name="stPassword" type="string">
+			<column name="st_password" length="11" not-null="true">
 
-</column>  </property>
+			</column>
+		</property>
 
-    <property
-        name="stTelnumber"
-	    type="string"
-    >
-<column name="st_telnumber" length="11" >
+		<property name="stTelnumber" type="string">
+			<column name="st_telnumber" length="11">
 
-</column>  </property>
+			</column>
+		</property>
 
-    <property
-        name="stEmail"
-	    type="string"
-    >
-<column name="st_email" length="20" >
+		<property name="stEmail" type="string">
+			<column name="st_email" length="20">
 
-</column>  </property>
+			</column>
+		</property>
 
-    <property
-        name="stScore"
-	    type="java.lang.Float"
-    >
-<column name="st_score" precision="3" scale="1" >
+		<property name="stScore" type="java.lang.Float">
+			<column name="st_score" precision="3" scale="1">
 
-</column>  </property>
+			</column>
+		</property>
 
-
-</class>
+		<property name="stLastQueryTime" type="long">
+			<column name="st_lastQueryTime"></column>
+		</property>
+	</class>
 
 </hibernate-mapping>

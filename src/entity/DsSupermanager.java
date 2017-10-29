@@ -10,7 +10,7 @@ public class DsSupermanager  implements java.io.Serializable {
 
 
      private Integer smgId;
-     private int smgPowerid;
+     private Integer smgPowerid;
      private String smgStuname;
      private String smgUsername;
      private String smgPassword;

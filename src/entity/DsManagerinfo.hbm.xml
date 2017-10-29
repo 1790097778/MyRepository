@@ -51,7 +51,7 @@
 
     <property
         name="mgReplyid"
-	    type="int"
+	    type="java.lang.Integer"
     >
 <column name="mg_replyid" not-null="true" >
 
@@ -67,7 +67,7 @@
 
     <property
         name="mgPowerid"
-	    type="int"
+	    type="java.lang.Integer"
     >
 <column name="mg_powerid" not-null="true" >
 

@@ -27,7 +27,7 @@
 
     <property
         name="tkCollegeid"
-	    type="int"
+	    type="java.lang.Integer"
     >
 <column name="tk_collegeid" not-null="true" >
 
@@ -35,7 +35,7 @@
 
     <property
         name="tkMajorid"
-	    type="int"
+	    type="java.lang.Integer"
     >
 <column name="tk_majorid" not-null="true" >
 
@@ -43,7 +43,7 @@
 
     <property
         name="tkStudentid"
-	    type="int"
+	    type="java.lang.Integer"
     >
 <column name="tk_studentid" not-null="true" >
 
@@ -51,7 +51,7 @@
 
     <property
         name="tkTeacherid"
-	    type="int"
+	    type="java.lang.Integer"
     >
 <column name="tk_teacherid" not-null="true" >
 

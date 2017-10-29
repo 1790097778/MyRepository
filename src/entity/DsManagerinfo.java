@@ -13,9 +13,9 @@ public class DsManagerinfo  implements java.io.Serializable {
      private Integer mgCollegeid;
      private Integer mgMajorid;
      private Integer mgClassid;
-     private int mgReplyid;
+     private Integer mgReplyid;
      private Integer mgPaperid;
-     private int mgPowerid;
+     private Integer mgPowerid;
      private String mgStuname;
      private String mgUsername;
      private String mgPassword;

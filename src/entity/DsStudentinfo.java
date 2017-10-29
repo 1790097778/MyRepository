@@ -1,4 +1,7 @@
 package entity;
+
+import java.util.Date;
+
 // Generated 2017-10-14 23:08:04 by Hibernate Tools 5.2.3.Final
 
 
@@ -10,21 +13,21 @@ public class DsStudentinfo  implements java.io.Serializable {
 
 
      private Integer stId;
-     private int stCollegeid;
-     private int stMajorid;
-     private int stClassid;
-     private int stTeacherid;
-     private int stPaperid;
+     private Integer stCollegeid;
+     private Integer stMajorid;
+     private Integer stClassid;
+     private Integer stTeacherid;
+     private Integer stPaperid;
      private Integer stSubjectid;
-     private int stReplyid;
-     private int stPowerid;
+     private Integer stReplyid;
+     private Integer stPowerid;
      private String stStuname;
      private String stUsername;
      private String stPassword;
      private String stTelnumber;
      private String stEmail;
      private Float stScore;
-
+     private Long stLastQueryTime;
     public DsStudentinfo() {
     }
 
@@ -165,6 +168,16 @@ public class DsStudentinfo  implements java.io.Serializable {
     }
 
 
+	public Long getStLastQueryTime() {
+		return stLastQueryTime;
+	}
+
+
+	public void setStLastQueryTime(Long stLastQueryTime) {
+		this.stLastQueryTime = stLastQueryTime;
+	}
+
+    
 
 
 }

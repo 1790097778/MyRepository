@@ -27,7 +27,7 @@
 
     <property
         name="smgPowerid"
-	    type="int"
+	    type="java.lang.Integer"
     >
 <column name="smg_powerid" not-null="true" >
 

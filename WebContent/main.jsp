@@ -119,21 +119,25 @@
 	function back(){
 		
 	}
-	function loadView(page_name,mothod_name,send_data){
+	function loadView(page_name,method_name,send_data){
 	    $.ajax({
 	    	global:false,
 	    	async:true,
 	    	type: "post",
 	    	dataType:"json",
 	    	data:send_data,
-	    	url:mothod_name,
+	    	url:method_name,
 	    	beforeSend:function(){
 	    		$("#page-inner").empty();
 	    		$("#page-inner").load("content/msg_loading.jsp");
 	    	},
 	    	success:function(data){
 	    		$("#page-inner").empty();
-	    		$("#page-inner").load(page_name,data,null);
+	    		if(data.success==1){
+	    			$("#page-inner").load(page_name,data.data,null);
+	    		}else{
+	    			location.href ="content/msg_error.jsp?error="+data.errorMsg;
+	    		}
 	    	},
 	    	error: function(XMLHttpRequest, textStatus, errorThrown) {
 	    		 var errorMsg="error in $.ajax()"+

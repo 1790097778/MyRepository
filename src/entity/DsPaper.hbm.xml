@@ -27,7 +27,7 @@
 
     <property
         name="ppStudentid"
-	    type="int"
+	    type="java.lang.Integer"
     >
 <column name="pp_studentid" not-null="true" >
 
@@ -35,7 +35,7 @@
 
     <property
         name="ppCollegeid"
-	    type="int"
+	    type="java.lang.Integer"
     >
 <column name="pp_collegeid" not-null="true" >
 
@@ -43,7 +43,7 @@
 
     <property
         name="ppMajorid"
-	    type="int"
+	    type="java.lang.Integer"
     >
 <column name="pp_majorid" not-null="true" >
 
@@ -51,7 +51,7 @@
 
     <property
         name="ppClassid"
-	    type="int"
+	    type="java.lang.Integer"
     >
 <column name="pp_classid" not-null="true" >
 
@@ -59,7 +59,7 @@
 
     <property
         name="ppTeacherid"
-	    type="int"
+	    type="java.lang.Integer"
     >
 <column name="pp_teacherid" not-null="true" >
 
@@ -67,7 +67,7 @@
 
     <property
         name="ppJudgerid"
-	    type="int"
+	    type="java.lang.Integer"
     >
 <column name="pp_judgerid" not-null="true" >
 
@@ -75,7 +75,7 @@
 
     <property
         name="ppReplyid"
-	    type="int"
+	    type="java.lang.Integer"
     >
 <column name="pp_replyid" not-null="true" >
 

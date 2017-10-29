@@ -52,8 +52,8 @@
 									out.print("<td>"+sb_name+"</td>");
 									out.print("<td>"+sb_type+"</td>");
 									out.print("<td class=\"center\">"+sb_college+"-"+sb_major+"</td>");
-									out.print("<td class=\"redstyle\"><a onclick=\"loadView('content/student_lesson_detail.jsp','student/lesson/detail',{sb_id:"+Integer.parseInt(sb_id)+"})\">查看详情</a></td>");
-									out.print("<td class=\"center\"><button onclick=\"loadView('content/student_lesson_choose.jsp','student/lesson/choose',{sb_id:"+Integer.parseInt(sb_id)+"})\">放弃选题</button></td></tr>");
+									out.print("<td class=\"redstyle\"><a onclick=\"loadView('content/student_lesson_detail.jsp','student/lesson/detail.do',{sb_id:"+Integer.parseInt(sb_id)+"})\">查看详情</a></td>");
+									out.print("<td class=\"center\"><button onclick=\"loadView('content/student_lesson_choose.jsp','student/lesson/abandon.do',{sb_id:"+Integer.parseInt(sb_id)+"})\">放弃选题</button></td></tr>");
 								%>
 						</tbody>
 					</table>

@@ -10,10 +10,10 @@ public class DsSubject  implements java.io.Serializable {
 
 
      private Integer sbId;
-     private int sbStudentid;
-     private int sbTeacherid;
-     private int sbCollegeid;
-     private int sbMajorid;
+     private Integer sbStudentid;
+     private Integer sbTeacherid;
+     private Integer sbCollegeid;
+     private Integer sbMajorid;
      private String sbTitle;
      private String sbStatus;
      private String sbType;
@@ -53,32 +53,32 @@ public class DsSubject  implements java.io.Serializable {
     public void setSbId(Integer sbId) {
         this.sbId = sbId;
     }
-    public int getSbStudentid() {
+    public Integer getSbStudentid() {
         return this.sbStudentid;
     }
     
-    public void setSbStudentid(int sbStudentid) {
+    public void setSbStudentid(Integer sbStudentid) {
         this.sbStudentid = sbStudentid;
     }
     public int getSbTeacherid() {
         return this.sbTeacherid;
     }
     
-    public void setSbTeacherid(int sbTeacherid) {
+    public void setSbTeacherid(Integer sbTeacherid) {
         this.sbTeacherid = sbTeacherid;
     }
     public int getSbCollegeid() {
         return this.sbCollegeid;
     }
     
-    public void setSbCollegeid(int sbCollegeid) {
+    public void setSbCollegeid(Integer sbCollegeid) {
         this.sbCollegeid = sbCollegeid;
     }
     public int getSbMajorid() {
         return this.sbMajorid;
     }
     
-    public void setSbMajorid(int sbMajorid) {
+    public void setSbMajorid(Integer sbMajorid) {
         this.sbMajorid = sbMajorid;
     }
     public String getSbTitle() {

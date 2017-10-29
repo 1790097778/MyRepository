@@ -10,10 +10,10 @@ public class DsReplyalloat  implements java.io.Serializable {
 
 
      private Integer raId;
-     private int raCollegeid;
-     private int raMajorid;
-     private int raTeacherid;
-     private int raStudentid;
+     private Integer raCollegeid;
+     private Integer raMajorid;
+     private Integer raTeacherid;
+     private Integer raStudentid;
      private String raTime;
      private String raPlace;
 

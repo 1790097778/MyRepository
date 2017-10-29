@@ -1,4 +1,7 @@
 package entity;
+
+import java.util.Date;
+
 // Generated 2017-10-14 23:08:04 by Hibernate Tools 5.2.3.Final
 
 
@@ -8,17 +11,16 @@ package entity;
  */
 public class DsNotice  implements java.io.Serializable {
 
-
      private Integer ntId;
-     private int ntPublisherid;
-     private int ntCollegeid;
-     private String ntTime;
+     private Integer ntPublisherid;
+     private Integer ntCollegeid;
+     private long ntTime;
      private String ntContent;
 
     public DsNotice() {
     }
 
-    public DsNotice(int ntPublisherid, int ntCollegeid, String ntTime, String ntContent) {
+    public DsNotice(int ntPublisherid, int ntCollegeid, long ntTime, String ntContent) {
        this.ntPublisherid = ntPublisherid;
        this.ntCollegeid = ntCollegeid;
        this.ntTime = ntTime;
@@ -46,11 +48,11 @@ public class DsNotice  implements java.io.Serializable {
     public void setNtCollegeid(int ntCollegeid) {
         this.ntCollegeid = ntCollegeid;
     }
-    public String getNtTime() {
+    public long getNtTime() {
         return this.ntTime;
     }
     
-    public void setNtTime(String ntTime) {
+    public void setNtTime(long ntTime) {
         this.ntTime = ntTime;
     }
     public String getNtContent() {

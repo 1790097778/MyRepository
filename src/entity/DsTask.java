@@ -10,10 +10,10 @@ public class DsTask  implements java.io.Serializable {
 
 
      private Integer tkId;
-     private int tkCollegeid;
-     private int tkMajorid;
-     private int tkStudentid;
-     private int tkTeacherid;
+     private Integer tkCollegeid;
+     private Integer tkMajorid;
+     private Integer tkStudentid;
+     private Integer tkTeacherid;
      private String tkLasttime;
      private String tkContent;
      private String tkState;

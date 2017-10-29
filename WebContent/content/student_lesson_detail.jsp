@@ -1,3 +1,4 @@
+
 <%@page pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -68,10 +69,22 @@
                         </div>
                     </div>
 					<div style="text-align: left;">
-						<button onclick="loadView('content/student_lesson_choose.jsp','student/lesson/choose',{page_number:"+<%=Integer.parseInt(request.getParameter("page_number"))%>+"})" style="margin: auto;">返回</button>
+						<%
+						Object o = request.getParameter("current_pageNumber");
+						if(o!=null)
+							out.print("<button onclick=\"loadView('content/student_lesson_choose.jsp','student/lesson/flip.do',{current_pageNumber:"+request.getParameter("current_pageNumber")+"})\" style=\"margin: auto\">返回</button>");
+						else
+							out.print("<button onclick=\"loadView('content/student_lesson.jsp','student/lesson/show.do',null)\" style=\"margin: auto\">返回</button>");
+							
+						%>
+						
 					</div>
 					<div style="text-align: center;margin-top: -25px;">
-						<button onclick="loadView('content/student_lesson.jsp','student/lesson',{sb_id:"+<%=Integer.parseInt(request.getParameter("sb_id"))%>+"})" style="margin: auto;">选择课题</button>
+					<%
+						if(o!=null)
+							out.print("<button onclick=\"loadView('content/student_lesson.jsp','student/lesson/addSubject.do',{sb_id:"+request.getParameter("sb_id")+"}) \" style=\"margin: auto\">选择课题</button>");
+					%>
+						
 					</div>
 				</div>
 			</div>

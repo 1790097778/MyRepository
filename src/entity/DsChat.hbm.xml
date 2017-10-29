@@ -7,19 +7,19 @@
 <hibernate-mapping>
 
 	<class name="entity.DsChat" table="ds_chat" catalog="design"
-		optimistic-lock="version">
+		optimistic-lock="version" lazy="false">
 
 		<id name="chId" type="int">
 			<column name="ch_id" />
 			<generator class="assigned" />
 		</id>
 		
-	<property name="chPublisherid" type="int">
+	<property name="chPublisherid" type="java.lang.Integer">
 		<column name="ch_publisherid" not-null="true">
 			</column>
 		</property>
 
-		<property name="chReceiver" type="int">
+		<property name="chReceiver" type="java.lang.Integer">
 			<column name="ch_receiver" not-null="true">
 			</column>
 		</property>
@@ -41,8 +41,8 @@
 
 			</column>
 		</property>
-
-		<property name="chTime" type="string">
+		
+		<property name="chTime" type="long">
 			<column name="ch_time" length="8" not-null="true">
 
 			</column>

@@ -92,9 +92,9 @@ PS：{name1:value1,name2:value2}表示两个参数，其中参数1（name1）的
 	    	beforeSend:function(){
 	    	},
 	    	success:function(data){
-	    		if(data.error=="name")alert("没有此用户，请检查账号！");
-	    		if(data.error=="password")alert("密码错误！");
-	    		if(data.error=="success"){
+	    		if(data.errorMsg=="name")alert("没有此用户，请检查账号！");
+	    		if(data.errorMsg=="password")alert("密码错误！");
+	    		if(data.errorMsg=="success"){
 	    			location.href ="main.jsp";
 	    		}
 	    	},
